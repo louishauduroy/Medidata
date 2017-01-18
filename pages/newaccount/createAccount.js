@@ -4,8 +4,8 @@ $(document).ready(function() {
   var mdp2 = "";
   var username = "";
 
-  mail = $('#email').val("");
-  username = $('#username').val("");
+  $('#email').val("");
+  $('#username').val("");
 
   $('.btn-login').click(function() {
     email = $('#email').val();

@@ -16,13 +16,14 @@ if(isset($_POST["email"]) && isset($_POST["mdp"]) && isset($_POST["username"])) 
 
   if (!$resultat)
   {
-    $req = $bdd->prepare('INSERT INTO utilisateurs(id, name, mdp, email, date_inscription) VALUES(NULL, :name, :mdp, :email, CURDATE())');
-    $req->execute(array(
+    $req2 = $bdd->prepare('INSERT INTO utilisateurs(id, name, mdp, email, date_inscription) VALUES(NULL, :name, :mdp, :email, CURDATE())');
+    $req2->execute(array(
       "name" => $name,
       "mdp" => $password,
       "email" => $email));
-
+      $req2->closeCursor();
     echo 'Creation reussi';
   } else { echo 'Email existe déjà'; }
+  $req->closeCursor();
 } else { echo 'failed'; }
 ?>
