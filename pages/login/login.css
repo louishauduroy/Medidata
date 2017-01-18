@@ -47,7 +47,7 @@ body {
   margin-left: 20px;
 }
 
-.btn-login:hover {
+.btn-default:hover {
   background-color: #ffffff;
   color: #00C4E1;
   border-color: #00C4E1;

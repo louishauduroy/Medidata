@@ -10,10 +10,10 @@ $(document).ready(function() {
 
     $.post("../../phpBDD/connexion.php", { email: email, mdp: mdp })
       .done(function(data) {
-        $('.login_message').text(data);
         if(data == 'Vous êtes connecté !'){
           window.location = '../mainpage/accueil.php';
         }
+        $('.login_message').text(data);
       });
 
     $.post("../../phpBDD/userlogged.php", false)
