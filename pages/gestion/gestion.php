@@ -40,7 +40,7 @@ if (!isset($_SESSION['username'])){
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a style="color: #ffffff;" href="#">Gestion Champs</a></li>
-          <li><a style="color: #ffffff;" href="">Recherche</a></li>
+          <li><a style="color: #ffffff;" href="../recherche/recherche.php">Recherche</a></li>
           <li class="dropdown">
             <a style="color: #ffffff;" href="#" class="username dropdown-toggle" data-toggle="dropdown">name <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -77,7 +77,7 @@ if (!isset($_SESSION['username'])){
           <form style="margin-bottom: 30px;">
             <div class="form-group">
               <label for="name">Nom du champ:</label>
-              <input type="text" class="form-control" id="nameAdd" placeholder="Entrer un champs">
+              <input type="text" class="form-control" id="nameAdd" placeholder="Entrer un champ">
             </div>
             <p style="text-align: center; color: red;" class="add_message"></p>
             <button style="margin: 0;" type="button" class="btn btn-default" id="btn-add">Ajouter</button>
@@ -90,7 +90,7 @@ if (!isset($_SESSION['username'])){
           <form>
             <div class="form-group">
               <label for="name">Nom du champ:</label>
-              <input type="text" class="form-control" id="nameDel" placeholder="Entrer un champs">
+              <input type="text" class="form-control" id="nameDel" placeholder="Entrer un champ">
             </div>
             <p style="text-align: center; color: red;" class="del_message"></p>
             <button style="margin: 0;" type="button" class="btn btn-default" id="btn-del">Supprimer</button>

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $.post("getChamps.php", false)
+  $.post("php/getChamps.php", false)
     .done(function(data) {
       $('#liste').html(data);
   });
@@ -9,7 +9,7 @@ $(document).ready(function() {
     var champs = $('#nameAdd').val();
     $('.del_message').text("");
 
-    $.post("addChamps.php", { champs: champs })
+    $.post("php/addChamps.php", { champs: champs })
       .done(function(data) {
         if(data == "Ce champs existe déja!"){
           $('.add_message').css('color','red');
@@ -18,7 +18,7 @@ $(document).ready(function() {
         else {
           $('.add_message').text(data);
           $('.add_message').css('color','#0BDA51');
-          $.post("getChamps.php", false)
+          $.post("php/getChamps.php", false)
             .done(function(data) {
               $('#liste').html(data);
           });
@@ -33,7 +33,7 @@ $(document).ready(function() {
     var champs = $('#nameDel').val();
     $('.add_message').text("");
 
-    $.post("delChamps.php", { champs: champs })
+    $.post("php/delChamps.php", { champs: champs })
       .done(function(data) {
         if(data == "Ce champs n'existe pas!"){
           $('.del_message').css('color','red');
@@ -42,7 +42,7 @@ $(document).ready(function() {
         else {
           $('.del_message').text(data);
           $('.del_message').css('color','#0BDA51');
-          $.post("getChamps.php", false)
+          $.post("php/getChamps.php", false)
             .done(function(data) {
               $('#liste').html(data);
           });

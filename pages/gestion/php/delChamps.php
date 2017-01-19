@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST["champs"])) {
-	include "../../phpBDD/connexionBDD.php";
+	include "../../../phpBDD/connexionBDD.php";
 
 	$champs=$_POST["champs"];
 

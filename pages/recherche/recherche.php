@@ -19,18 +19,20 @@ if (!isset($_SESSION['username'])){
 
   <link rel="stylesheet" href="../../jquery_bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../login/login.css">
-  <link rel="stylesheet" href="accueil.css">
+  <link rel="stylesheet" href="../mainpage/accueil.css">
+  <link rel="stylesheet" href="recherche.css">
 
   <script src="../../jquery_bootstrap/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="../../jquery_bootstrap/bootstrap.min.js"></script>
-  <script type="text/javascript" src="accueil.js"></script>
+  <script type="text/javascript" src="../mainpage/accueil.js"></script>
+  <script type="text/javascript" src="recherche.js"></script>
 
 </head>
 
 <header>
   <div class="navbar navbar-default navbar-static-top">
     <div class="container">
-      <a href="#" style="color: #ffffff;" class="navbar-brand">MEDIDATA</a>
+      <a href="../mainpage/accueil.php" style="color: #ffffff;" class="navbar-brand">MEDIDATA</a>
       <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -39,7 +41,7 @@ if (!isset($_SESSION['username'])){
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a style="color: #ffffff;" href="../gestion/gestion.php">Gestion Champs</a></li>
-          <li><a style="color: #ffffff;" href="../recherche/recherche.php">Recherche</a></li>
+          <li><a style="color: #ffffff;" href="#">Recherche</a></li>
           <li class="dropdown">
             <a style="color: #ffffff;" href="#" class="username dropdown-toggle" data-toggle="dropdown">name <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -54,13 +56,32 @@ if (!isset($_SESSION['username'])){
 </header>
 
 <body>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
-      <img class="logo" src="../../img/logo.png" alt="">
-    </div>
+
+  <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav" style="margin-bottom: 200px;">
+
+          </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h1>Recherches sur la base de donnée</h1>
+                      <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Préferences recherche</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+
   </div>
-  <h3 style="text-align: center; color: #A4A3A3; margin-top: 50px;">Medidata est un outil dévellopé par 4 étudiants ingénieurs de l'ECE Paris.
-    Il permet de centraliser les données des centres hospitaliers vers les Agences Régionales de Santé (ARS).</h3>
+  <!-- /#wrapper -->
+
 </body>
 
 </html>
