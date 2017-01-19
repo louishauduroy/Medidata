@@ -53,6 +53,10 @@ $(document).ready(function() {
       .done(function(data) {
         if(data=='Changement username réussi !'){
           $('.username_message').css('color','#0BDA51');
+          $.post("../../phpBDD/userlogged.php", false)
+            .done(function(data) {
+              $('.username').html(data+' <b class="caret"></b>');
+            })
         }
         else { $('.username_message').css('color','red'); }
           $('.username_message').text(data);
