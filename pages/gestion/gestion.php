@@ -64,13 +64,13 @@ if (!isset($_SESSION['username'])){
   </div>
   <div class="container-fluid text-center">
     <div class="row">
-      <div class="col-md-6 col-xs-6 bg-lightgrey existingData" id="existingData">
-        <h3 style="margin-left: 30px; color: #A4A3A3; margin-bottom: 30px; font-size: 35px;">Champs existants</h3>
+      <div class="col-md-5 col-xs-6 bg-lightgrey existingData" id="existingData">
+        <h3 style="margin-top: 60px; margin-left: 30px; color: #A4A3A3; margin-bottom: 30px; font-size: 35px;">Champs existants</h3>
         <div id="liste">
 
         </div>
       </div>
-      <div  style="margin-bottom: 80px;" class="col-md-6 col-xs-6">
+      <div  style="margin-bottom: 80px;" class="wrap-login col-md-offset-2 col-md-4 col-xs-6">
         <div class="row">
         <div class="col-md-12 addData" id="addData">
           <h3 style="color: #00C4E1; margin-bottom: 20px;">Ajouter un champ</h3>

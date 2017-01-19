@@ -60,19 +60,27 @@ if (!isset($_SESSION['username'])){
   <div id="wrapper">
       <!-- Sidebar -->
       <div id="sidebar-wrapper">
+
           <ul class="sidebar-nav" style="margin-bottom: 200px;">
 
           </ul>
       </div>
-      <!-- /#sidebar-wrapper -->
 
+      <div class="col-lg-3">
+        <?php include "getChamps.php"; ?>
+      </div>
+      <!-- /#sidebar-wrapper -->
       <!-- Page Content -->
-      <div id="page-content-wrapper">
+      <div id="page-content-wrapper col-lg-11">
           <div class="container-fluid">
               <div class="row">
-                  <div class="col-lg-12">
+                  <div class="">
                       <h1>Recherches sur la base de donnée</h1>
                       <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Préferences recherche</a>
+                      <div id="zone_resultats">
+
+
+                      </div>
                   </div>
               </div>
           </div>
