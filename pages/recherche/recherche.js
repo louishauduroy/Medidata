@@ -17,6 +17,7 @@ $(document).ready(function() {
   // });
 
   $("#searchbutton").click(function(e) {
+    
     $( "#zone_resultats" ).load( "phpinfosbdd.php?id_patient=13" );
     var myParam;
   });

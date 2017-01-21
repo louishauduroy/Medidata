@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-
 <?php
 session_start();
 if (!isset($_SESSION['username'])){
@@ -10,6 +6,7 @@ if (!isset($_SESSION['username'])){
   <?php
 }
 ?>
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -59,7 +56,7 @@ if (!isset($_SESSION['username'])){
       <img class="logo" src="../../img/logo.png" alt="">
     </div>
   </div>
-  <h3 style="text-align: center; color: #A4A3A3; margin-top: 50px;">Medidata est un outil dévellopé par 4 étudiants ingénieurs de l'ECE Paris.
+  <h3 style="text-align: center; color: #A4A3A3; margin-top: 50px;">Medidata est un outil développé par 4 étudiants ingénieurs de l'ECE Paris.
     Il permet de centraliser les données des centres hospitaliers vers les Agences Régionales de Santé (ARS).</h3>
 </body>
 

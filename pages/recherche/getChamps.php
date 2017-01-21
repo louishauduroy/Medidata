@@ -10,9 +10,9 @@ $stringHtml= "<button style='margin-bottom: 30px;' type='button' id='searchbutto
 while ($resultat = $req->fetch())
 {
   $name=$resultat['name'];
-  if (strpos($name, 'date') !== false) {
+  if (strpos($name, "date") !== false) {
     $stringHtml.= "<p style='color: black; margin-top: 20px; padding-left: 20px; padding-right: 20px;'>$name
-    <input type='text' id='$name' class='form-control'placeholder='Enter'>
+    <input type='date' id='$name' class='form-control' placeholder='JJ-MM-YYYY'>
     </p>";
   }
   else {

@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-
-<html>
-
 <?php
 session_start();
-if (!isset($_SESSION['username'])){
-
-}
-else {
+if (isset($_SESSION['username'] )){
   ?>
     <script> window.location.replace('../mainpage/accueil.php') </script>
   <?php
 }
 ?>
+
+<html>
 
 <head>
   <meta charset="utf-8">

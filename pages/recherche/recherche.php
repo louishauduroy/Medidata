@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-
 <?php
 session_start();
 if (!isset($_SESSION['username'])){
@@ -10,6 +6,8 @@ if (!isset($_SESSION['username'])){
   <?php
 }
 ?>
+
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -58,25 +56,18 @@ if (!isset($_SESSION['username'])){
 <body>
 
   <div id="wrapper">
-      <!-- Sidebar -->
-      <div id="sidebar-wrapper">
-
-          <ul class="sidebar-nav" style="margin-bottom: 200px;">
-
-          </ul>
-      </div>
 
       <div class="col-lg-3">
         <?php include "getChamps.php"; ?>
       </div>
       <!-- /#sidebar-wrapper -->
       <!-- Page Content -->
-      <div id="page-content-wrapper col-lg-11">
-          <div class="container-fluid">
+      <div id="col-lg-11">
+          <div class="">
               <div class="row">
                   <div class="">
                       <h1>Recherches sur la base de donnée</h1>
-                      <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Préferences recherche</a>
+
                       <div id="zone_resultats">
 
 

@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-
 <?php
 session_start();
 if (!isset($_SESSION['username'])){
@@ -10,6 +6,8 @@ if (!isset($_SESSION['username'])){
   <?php
 }
 ?>
+
+<html>
 
 <head>
   <meta charset="utf-8">
