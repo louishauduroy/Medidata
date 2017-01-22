@@ -28,7 +28,7 @@ if (!isset($_SESSION['username'])){
   <div style="background-color: #00C4E1;">
     <div class="container">
       <a href="#" style="color: #ffffff;" class="navbar-brand">MEDIDATA</a>
-      <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
+      <button style="background-color: white;" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

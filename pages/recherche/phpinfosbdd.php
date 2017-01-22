@@ -24,7 +24,7 @@
 
 			//construction de l'en-tête du tableau avec le nom des champs
 			for($i=0;$i<sizeof($tabChamps);$i++){
-				$stringHtml.= "<th>$tabChamps[$i]</th>";
+				$stringHtml.= "<th style='text-align: center; background-color: #00C4E1; color: #ffffff;'>$tabChamps[$i]</th>";
 			}
 
 			$stringHtml.= "</tr>";

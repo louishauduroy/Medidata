@@ -27,10 +27,10 @@ if (!isset($_SESSION['username'])){
 </head>
 
 <header>
-  <div style="background-color: #00C4E1;">
+  <div class="navbar-fixed-top" style="background-color: #00C4E1;">
     <div class="container">
       <a href="../mainpage/accueil.php" style="color: #ffffff;" class="navbar-brand">MEDIDATA</a>
-      <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
+      <button  style="background-color: white;" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -53,71 +53,72 @@ if (!isset($_SESSION['username'])){
 </header>
 
 <body>
-  <h1 style="text-align: center; font-size: 60px; color: #A4A3A3; margin-top: 50px; margin-bottom: 30px;">Gestion de compte</h1>
-  <div class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
-    <form>
-      <h1 class ="titre_login">Changer votre mot de passe :</h1>
-      <div class="form-group">
-        <label for="">Email :</label>
-        <input type="email" class="form-control" id="email" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <label for="">Ancien mot de passe :</label>
-        <input type="password" class="form-control" id="Amdp" placeholder="Ancien Password">
-      </div>
-      <div class="form-group">
-        <label for="">Nouveau mot de passe :</label>
-        <input type="password" class="form-control" id="Nmdp" placeholder="Nouveau Password">
-      </div>
-      <div class="form-group">
-        <label for="">Confirm :</label>
-        <input type="password" class="form-control" id="Nmdp2" placeholder="Nouveau Password">
-      </div>
-      <p style="text-align: center; color: red;" class="mdp_message"></p>
-      <button type="button" class="btn-mdp btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
-    </form>
-  </div>
+  <div style="padding-top: 50px;">
+    <h1 style="text-align: center; font-size: 60px; color: #A4A3A3; margin-top: 50px; margin-bottom: 30px;">Gestion de compte</h1>
+    <div class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
+      <form>
+        <h1 class ="titre_login">Changer votre mot de passe :</h1>
+        <div class="form-group">
+          <label for="">Email :</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="">Ancien mot de passe :</label>
+          <input type="password" class="form-control" id="Amdp" placeholder="Ancien Password">
+        </div>
+        <div class="form-group">
+          <label for="">Nouveau mot de passe :</label>
+          <input type="password" class="form-control" id="Nmdp" placeholder="Nouveau Password">
+        </div>
+        <div class="form-group">
+          <label for="">Confirm :</label>
+          <input type="password" class="form-control" id="Nmdp2" placeholder="Nouveau Password">
+        </div>
+        <p style="text-align: center; color: red;" class="mdp_message"></p>
+        <button type="button" class="btn-mdp btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
+      </form>
+    </div>
 
-  <div style="margin-top: 70px;" class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
-    <form>
-      <h1 class ="titre_login">Changer votre email :</h1>
-      <div class="form-group">
-        <label for="">Ancien email :</label>
-        <input type="email" class="form-control" id="Aemail" placeholder="Ancien Email">
-      </div>
-      <div class="form-group">
-        <label for="">Nouvel email :</label>
-        <input type="email" class="form-control" id="Nemail" placeholder="Nouveau Email">
-      </div>
-      <div class="form-group">
-        <label for="">Mot de passe :</label>
-        <input type="password" class="form-control" id="mdp" placeholder="Password">
-      </div>
-      <p style="text-align: center; color: red;" class="email_message"></p>
-      <button type="button" class="btn-email btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
-    </form>
-  </div>
+    <div style="margin-top: 70px;" class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
+      <form>
+        <h1 class ="titre_login">Changer votre email :</h1>
+        <div class="form-group">
+          <label for="">Ancien email :</label>
+          <input type="email" class="form-control" id="Aemail" placeholder="Ancien Email">
+        </div>
+        <div class="form-group">
+          <label for="">Nouvel email :</label>
+          <input type="email" class="form-control" id="Nemail" placeholder="Nouveau Email">
+        </div>
+        <div class="form-group">
+          <label for="">Mot de passe :</label>
+          <input type="password" class="form-control" id="mdp" placeholder="Password">
+        </div>
+        <p style="text-align: center; color: red;" class="email_message"></p>
+        <button type="button" class="btn-email btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
+      </form>
+    </div>
 
-  <div style="margin-top: 70px; margin-bottom: 70px;" class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
-    <form>
-      <h1 class ="titre_login">Changer votre username :</h1>
-      <div class="form-group">
-        <label for="">Email :</label>
-        <input type="email" class="form-control" id="email2" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <label for="">Nouveau username :</label>
-        <input type="text" class="form-control" id="username2" placeholder="Username">
-      </div>
-      <div class="form-group">
-        <label for="">Mot de passe :</label>
-        <input type="password" class="form-control" id="mdp2" placeholder="Password">
-      </div>
-      <p style="text-align: center; color: red;" class="username_message"></p>
-      <button type="button" class="btn-username btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
-    </form>
+    <div style="margin-top: 70px; margin-bottom: 70px;" class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
+      <form>
+        <h1 class ="titre_login">Changer votre username :</h1>
+        <div class="form-group">
+          <label for="">Email :</label>
+          <input type="email" class="form-control" id="email2" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="">Nouveau username :</label>
+          <input type="text" class="form-control" id="username2" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="">Mot de passe :</label>
+          <input type="password" class="form-control" id="mdp2" placeholder="Password">
+        </div>
+        <p style="text-align: center; color: red;" class="username_message"></p>
+        <button type="button" class="btn-username btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
+      </form>
+    </div>
   </div>
-
 </body>
 
 </html>

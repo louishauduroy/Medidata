@@ -27,10 +27,10 @@ if (!isset($_SESSION['username'])){
 </head>
 
 <header>
-  <div style="background-color: #00C4E1;">
+  <div class="navbar-fixed-top" style="background-color: #00C4E1;">
     <div class="container">
       <a href="../mainpage/accueil.php" style="color: #ffffff;" class="navbar-brand">MEDIDATA</a>
-      <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
+      <button style="background-color: white;" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -53,53 +53,50 @@ if (!isset($_SESSION['username'])){
 </header>
 
 <body>
+  <div style="padding-top: 50px;">
+    <div class="jumbotron text-center bg-blue">
+      <h1>Sélection des champs</h1>
+      <p>Définissez ici les données à récolter auprès des hopitaux.</p>
+    </div>
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-md-5 col-xs-6 bg-lightgrey existingData" id="existingData">
+          <h3 style="margin-top: 60px; margin-left: 30px; color: #A4A3A3; margin-bottom: 30px; font-size: 35px;">Champs existants</h3>
+          <div id="liste">
 
-  <body >
-
-  <div class="jumbotron text-center bg-blue">
-    <h1>Sélection des champs</h1>
-    <p>Définissez ici les données à récolter auprès des hopitaux.</p>
-  </div>
-  <div class="container-fluid text-center">
-    <div class="row">
-      <div class="col-md-5 col-xs-6 bg-lightgrey existingData" id="existingData">
-        <h3 style="margin-top: 60px; margin-left: 30px; color: #A4A3A3; margin-bottom: 30px; font-size: 35px;">Champs existants</h3>
-        <div id="liste">
-
+          </div>
         </div>
-      </div>
-      <div  style="margin-bottom: 80px;" class="wrap-login col-md-offset-2 col-md-4 col-xs-6">
-        <div class="row">
-        <div class="col-md-12 addData" id="addData">
-          <h3 style="color: #00C4E1; margin-bottom: 20px;">Ajouter un champ</h3>
-          <form style="margin-bottom: 30px;">
-            <div class="form-group">
-              <label for="name">Nom du champ:</label>
-              <input type="text" class="form-control" id="nameAdd" placeholder="Entrer un champ">
-            </div>
-            <p style="text-align: center; color: red;" class="add_message"></p>
-            <button style="margin: 0;" type="button" class="btn btn-default" id="btn-add">Ajouter</button>
-          </form>
-        </div>
-        </div>
-        <div class="row">
-        <div class="col-md-12 addData" id="delData">
-          <h3 style="color: #00C4E1; margin-bottom: 20px;">Supprimer un champ</h3>
-          <form>
-            <div class="form-group">
-              <label for="name">Nom du champ:</label>
-              <input type="text" class="form-control" id="nameDel" placeholder="Entrer un champ">
-            </div>
-            <p style="text-align: center; color: red;" class="del_message"></p>
-            <button style="margin: 0;" type="button" class="btn btn-default" id="btn-del">Supprimer</button>
-          </form>
-        </div>
+        <div  style="margin-bottom: 80px;" class="wrap-login col-md-offset-2 col-md-4 col-xs-6">
+          <div class="row">
+          <div class="col-md-12 addData" id="addData">
+            <h3 style="color: #00C4E1; margin-bottom: 20px;">Ajouter un champ</h3>
+            <form style="margin-bottom: 30px;">
+              <div class="form-group">
+                <label for="name">Nom du champ:</label>
+                <input type="text" class="form-control" id="nameAdd" placeholder="Entrer un champ">
+              </div>
+              <p style="text-align: center; color: red;" class="add_message"></p>
+              <button style="margin: 0;" type="button" class="btn btn-default" id="btn-add">Ajouter</button>
+            </form>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12 addData" id="delData">
+            <h3 style="color: #00C4E1; margin-bottom: 20px;">Supprimer un champ</h3>
+            <form>
+              <div class="form-group">
+                <label for="name">Nom du champ:</label>
+                <input type="text" class="form-control" id="nameDel" placeholder="Entrer un champ">
+              </div>
+              <p style="text-align: center; color: red;" class="del_message"></p>
+              <button style="margin: 0;" type="button" class="btn btn-default" id="btn-del">Supprimer</button>
+            </form>
+          </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</body>
-
 </body>
 
 </html>

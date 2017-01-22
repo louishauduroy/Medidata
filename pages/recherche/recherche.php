@@ -28,10 +28,10 @@ if (!isset($_SESSION['username'])){
 </head>
 
 <header>
-  <div style="background-color: #00C4E1;">
+  <div class="navbar-fixed-top" style="background-color: #00C4E1;">
     <div class="container">
       <a href="../mainpage/accueil.php" style="color: #ffffff;" class="navbar-brand">MEDIDATA</a>
-      <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
+      <button  style="background-color: white;" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -55,37 +55,25 @@ if (!isset($_SESSION['username'])){
 
 <body>
 
-  <div id="wrapper">
-
+  <div style="padding-top: 50px;" id="wrapper">
     <div id="sidebar-wrapper">
       <button style='' type='button' id='searchbutton' class='btn btn-warning btn-lg btn-block'>SEARCH</button>
-        <ul style="margin-top: 50px; padding-bottom: 100px;" class="sidebar-nav">
-
-
-
-        </ul>
+      <ul style="margin-top: 50px; padding-bottom: 100px;" class="sidebar-nav"></ul>
     </div>
-      <!-- /#sidebar-wrapper -->
-      <!-- Page Content -->
-      <div id="page-content-wrapper">
-          <div class="container-fluid">
-              <div class="row">
-                  <div style="padding-right:40px; padding-left:40px;" class="col-lg-12" id="div-tab">
-                    <div class="wrap-login">
-                      <h1 style="text-align: center;">Recherche DataBase Medidata</h1>
-                      <a href="#menu-toggle" class="btn btn-default btn-lg btn-block" id="menu-toggle">Critères recherche</a>
-                    </div>
-
-                    <div style="margin-top: 20px;" id="zone_resultats">
-
-                    </div>
-                  </div>
-              </div>
+    <div class="jumbotron text-center bg-blue">
+      <h1 style="text-align: center;">Recherche DataBase Medidata</h1>
+      <a href="#menu-toggle" class="btn btn-default btn-lg" id="menu-toggle">Critères recherche</a>
+    </div>
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div style="padding-right:40px; padding-left:40px;" class="col-lg-12" id="div-tab">
+            <div class="wrap-login" style="margin-top: 20px;" id="zone_resultats"></div>
           </div>
-      <!-- /#page-content-wrapper -->
-
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- /#wrapper -->
 
 </body>
 
