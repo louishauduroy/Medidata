@@ -25,7 +25,7 @@ if (!isset($_SESSION['username'])){
 </head>
 
 <header>
-  <div class="navbar navbar-default navbar-static-top">
+  <div style="background-color: #00C4E1;">
     <div class="container">
       <a href="#" style="color: #ffffff;" class="navbar-brand">MEDIDATA</a>
       <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">

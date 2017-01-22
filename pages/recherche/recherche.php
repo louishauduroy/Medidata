@@ -28,7 +28,7 @@ if (!isset($_SESSION['username'])){
 </head>
 
 <header>
-  <div class="navbar navbar-default navbar-static-top">
+  <div style="background-color: #00C4E1;">
     <div class="container">
       <a href="../mainpage/accueil.php" style="color: #ffffff;" class="navbar-brand">MEDIDATA</a>
       <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
@@ -57,25 +57,31 @@ if (!isset($_SESSION['username'])){
 
   <div id="wrapper">
 
-      <div class="col-lg-3">
-        <?php include "getChamps.php"; ?>
-      </div>
+    <div id="sidebar-wrapper">
+      <button style='' type='button' id='searchbutton' class='btn btn-warning btn-lg btn-block'>SEARCH</button>
+        <ul style="margin-top: 50px; padding-bottom: 100px;" class="sidebar-nav">
+
+
+
+        </ul>
+    </div>
       <!-- /#sidebar-wrapper -->
       <!-- Page Content -->
-      <div id="col-lg-11">
-          <div class="">
+      <div id="page-content-wrapper">
+          <div class="container-fluid">
               <div class="row">
-                  <div class="">
-                      <h1>Recherches sur la base de donnée</h1>
+                  <div style="padding-right:40px; padding-left:40px;" class="col-lg-12" id="div-tab">
+                    <div class="wrap-login">
+                      <h1 style="text-align: center;">Recherche DataBase Medidata</h1>
+                      <a href="#menu-toggle" class="btn btn-default btn-lg btn-block" id="menu-toggle">Critères recherche</a>
+                    </div>
 
-                      <div id="zone_resultats">
+                    <div style="margin-top: 20px;" id="zone_resultats">
 
-
-                      </div>
+                    </div>
                   </div>
               </div>
           </div>
-      </div>
       <!-- /#page-content-wrapper -->
 
   </div>
