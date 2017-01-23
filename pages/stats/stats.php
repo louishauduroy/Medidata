@@ -18,12 +18,12 @@ if (!isset($_SESSION['username'])){
   <link rel="stylesheet" href="../../jquery_bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../login/login.css">
   <link rel="stylesheet" href="../mainpage/accueil.css">
-  <link rel="stylesheet" href="recherche.css">
 
   <script src="../../jquery_bootstrap/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="../../jquery_bootstrap/bootstrap.min.js"></script>
   <script type="text/javascript" src="../mainpage/accueil.js"></script>
-  <script type="text/javascript" src="recherche.js"></script>
+  <script type="text/javascript" src="stats.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 
 </head>
 
@@ -39,7 +39,7 @@ if (!isset($_SESSION['username'])){
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a style="color: #ffffff;" href="../gestion/gestion.php">Gestion Champs</a></li>
-          <li><a style="color: #ffffff;" href="#">Recherche</a></li>
+          <li><a style="color: #ffffff;" href="../recherche/recherche.php">Recherche</a></li>
           <li class="dropdown">
             <a style="color: #ffffff;" href="#" class="username dropdown-toggle" data-toggle="dropdown">name <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -54,27 +54,7 @@ if (!isset($_SESSION['username'])){
 </header>
 
 <body>
-
-  <div style="padding-top: 50px;" id="wrapper">
-    <div id="sidebar-wrapper">
-      <button style='' type='button' id='searchbutton' class='btn btn-warning btn-lg btn-block'>SEARCH</button>
-      <ul style="margin-top: 50px; padding-bottom: 100px;" class="sidebar-nav"></ul>
-    </div>
-    <div class="jumbotron text-center bg-blue">
-      <h1 style="text-align: center;">Recherche Database</h1>
-      <a href="#menu-toggle" style="margin: 0;" class="btn btn-default btn-lg" id="menu-toggle">Critères recherche</a>
-    </div>
-    <div id="page-content-wrapper">
-      <div class="container-fluid">
-        <div class="row">
-          <div style="padding-right:40px; padding-left:40px;" class="col-lg-12" id="div-tab">
-            <div class="wrap-login" style="margin-top: 20px;" id="zone_resultats"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <canvas id="myChart"></canvas>
 </body>
 
 </html>

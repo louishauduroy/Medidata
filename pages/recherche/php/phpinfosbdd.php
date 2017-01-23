@@ -1,6 +1,6 @@
 <?php
 
-		include "../../phpBDD/connexionBDD.php";
+		include "../../../phpBDD/connexionBDD.php";
 
 			$stringQuery="SELECT * FROM patient1"; //construction de la chaine de requète
 			$stringHtml=""; //construction du retour html

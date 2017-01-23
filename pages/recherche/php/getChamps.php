@@ -1,6 +1,6 @@
 <?php
 
-include "../../phpBDD/connexionBDD.php";
+include "../../../phpBDD/connexionBDD.php";
 
 $req = $bdd->prepare('SELECT * FROM champs');
 $req->execute();

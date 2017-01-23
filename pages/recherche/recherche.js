@@ -4,7 +4,7 @@ $(document).ready(function() {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
 
-      $.post("getChamps.php", false)
+      $.post("php/getChamps.php", false)
         .done(function(data) {
           $('.sidebar-nav').html(data);
       });
@@ -14,7 +14,7 @@ $(document).ready(function() {
   $("#searchbutton").click(function(e) {
     var values = {};
     var valuesname = {};
-    var lien = "phpinfosbdd.php";
+    var lien = "php/phpinfosbdd.php";
     var premier = true;
 
     $('.data').each(function() {
@@ -32,7 +32,6 @@ $(document).ready(function() {
       }
     });
     console.log(lien);
-    console.log("coucou");
 
 
     $( "#zone_resultats" ).load(lien);
