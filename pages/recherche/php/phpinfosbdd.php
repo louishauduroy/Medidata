@@ -2,7 +2,7 @@
 
 		include "../../../phpBDD/connexionBDD.php";
 
-			$stringQuery="SELECT * FROM patient1"; //construction de la chaine de requète
+			$stringQuery="SELECT * FROM certificat"; //construction de la chaine de requète
 			$stringHtml=""; //construction du retour html
 
 
@@ -26,7 +26,7 @@
 			for($i=0;$i<sizeof($tabChamps);$i++){
 				$stringHtml.= "<th style='text-align: center; background-color: #00C4E1; color: #ffffff;'>$tabChamps[$i]</th>";
 			}
-
+			$stringHtml.= "<th style='text-align: center; background-color: #00C4E1; color: #ffffff;'>Certificat</th>";
 			$stringHtml.= "</tr>";
 
 			//pour chaque case (champ) cochée, on met à jour la requète et l'en-tête du tableau
@@ -66,7 +66,8 @@
 					$temp=$donnees[$tabChamps[$i]];
 					$stringHtml.= "<td>$temp</td>";
 				}
-
+				$id=$donnees['id_patient'];
+				$stringHtml.= "<td><button style='margin: 0; padding: 0;' type='button' class='btn btn-success btn-lg btn-block'><a href='../certificat/setChamps.php?id_patient=$id' target='_blank'>Certif</a></button></td>";
 				$stringHtml.= "</tr>";
 
 			}

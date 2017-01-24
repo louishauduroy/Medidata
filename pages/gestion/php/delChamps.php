@@ -14,7 +14,7 @@ if(isset($_POST["champs"])) {
     $req2->execute();
     $req2->closeCursor();
 
-    $req3 = $bdd->prepare("ALTER TABLE `patient1` DROP COLUMN `$champs`");
+    $req3 = $bdd->prepare("ALTER TABLE `certificat` DROP COLUMN `$champs`");
     $req3->execute();
     $req3->closeCursor();
     echo 'Champs supprimé !';

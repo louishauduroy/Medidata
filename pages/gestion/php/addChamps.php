@@ -13,7 +13,7 @@ if(isset($_POST["champs"])) {
     $req2->execute();
     $req2->closeCursor();
 
-    $req3 = $bdd->prepare("ALTER TABLE patient1 ADD $champs TEXT NOT NULL");
+    $req3 = $bdd->prepare("ALTER TABLE certificat ADD $champs TEXT NOT NULL");
     $req3->execute();
     $req3->closeCursor();
     echo 'Champs ajouté !';

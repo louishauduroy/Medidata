@@ -10,3 +10,13 @@ a {
 label {
   font-size: 15px;
 }
+
+.topmenu {
+  color: #00C4E1;
+}
+
+.topmenu:hover {
+  color: white;
+}
+
+#sidebar { width: 40%; position: fixed; left: 40%; }

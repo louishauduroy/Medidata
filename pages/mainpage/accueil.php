@@ -35,6 +35,7 @@ if (!isset($_SESSION['username'])){
       </button>
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class="nav navbar-nav navbar-right">
+          <li><a style="color: #ffffff;" href="../stats/stats.php">Statistiques</a></li>
           <li><a style="color: #ffffff;" href="../gestion/gestion.php">Gestion Champs</a></li>
           <li><a style="color: #ffffff;" href="../recherche/recherche.php">Recherche</a></li>
           <li class="dropdown">

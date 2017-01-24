@@ -38,6 +38,7 @@ if (!isset($_SESSION['username'])){
       </button>
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class="nav navbar-nav navbar-right">
+          <li><a style="color: #ffffff;" href="#">Statistiques</a></li>
           <li><a style="color: #ffffff;" href="../gestion/gestion.php">Gestion Champs</a></li>
           <li><a style="color: #ffffff;" href="../recherche/recherche.php">Recherche</a></li>
           <li class="dropdown">
@@ -53,7 +54,27 @@ if (!isset($_SESSION['username'])){
   </div>
 </header>
 
-<body>
+<body >
+  <div style="margin-top: 100px;" class="container col-xl-12 col-md-12 col-xs-12">
+    <ul style="margin-bottom: 50px;" class="nav nav-tabs">
+      <li>
+        <a class="topmenu" href="#graphiques" data-toggle="tab">Grahpiques</a>
+      </li>
+      <li>
+        <a class="topmenu" href="#statistiques" data-toggle="tab">Numériques</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane" id="graphiques">
+        <p>Hello graph</p>
+      </div>
+      <div class="tab-pane" id="statistiques">
+        <p>Hello stats</p>
+      </div>
+    </div>
+
+  </div>
   <canvas id="myChart"></canvas>
 </body>
 

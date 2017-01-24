@@ -37,6 +37,7 @@ if (!isset($_SESSION['username'])){
       </button>
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class="nav navbar-nav navbar-right">
+          <li><a style="color: #ffffff;" href="../stats/stats.php">Statistiques</a></li>
           <li><a style="color: #ffffff;" href="#">Gestion Champs</a></li>
           <li><a style="color: #ffffff;" href="../recherche/recherche.php">Recherche</a></li>
           <li class="dropdown">
@@ -54,19 +55,21 @@ if (!isset($_SESSION['username'])){
 
 <body>
   <div style="padding-top: 50px;">
-    <div class="jumbotron text-center bg-blue">
-      <h1>Sélection des champs</h1>
-      <p>Définissez ici les données à récolter auprès des hopitaux.</p>
-    </div>
+
     <div class="container-fluid text-center">
       <div class="row">
-        <div class="col-md-5 col-xs-6 bg-lightgrey existingData" id="existingData">
-          <h3 style="margin-top: 60px; margin-left: 30px; color: #A4A3A3; margin-bottom: 30px; font-size: 35px;">Champs existants</h3>
-          <div id="liste">
+        <div style="width: 50%; "class="col-md-5 col-xs-6 bg-lightgrey existingData" id="existingData">
+          <div class="jumbotron text-center bg-blue">
+            <h1>Sélection des champs</h1>
+            <p>Définissez ici les données à récolter auprès des hopitaux.</p>
+            <h3 style="margin-top: 60px; color: #A4A3A3; margin-bottom: 30px; font-size: 35px;">Champs existants</h3>
+            <div id="liste">
 
+            </div>
           </div>
+
         </div>
-        <div  style="margin-bottom: 80px;" class="wrap-login col-md-offset-2 col-md-4 col-xs-6">
+        <div  style="margin-bottom: 80px;" class="wrap-login col-md-offset-2 col-md-4 col-xs-6" id="sidebar">
           <div class="row">
           <div class="col-md-12 addData" id="addData">
             <h3 style="color: #00C4E1; margin-bottom: 20px;">Ajouter un champ</h3>
