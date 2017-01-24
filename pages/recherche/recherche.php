@@ -57,23 +57,23 @@ if (!isset($_SESSION['username'])){
 <body>
 
   <div style="padding-top: 50px;" id="wrapper">
+
     <div id="sidebar-wrapper">
       <button style='' type='button' id='searchbutton' class='btn btn-warning btn-lg btn-block'>SEARCH</button>
       <ul style="margin-top: 50px; padding-bottom: 100px;" class="sidebar-nav"></ul>
     </div>
+
     <div class="jumbotron text-center bg-blue">
-      <h1 style="text-align: center;">Recherche Database</h1>
+      <h1 style="">Recherche Database</h1>
       <a href="#menu-toggle" style="margin: 0;" class="btn btn-default btn-lg" id="menu-toggle">Critères recherche</a>
     </div>
-    <div id="page-content-wrapper">
-      <div class="container-fluid">
-        <div class="row">
-          <div style="padding-right:40px; padding-left:40px;" class="col-lg-12" id="div-tab">
-            <div class="wrap-login" style="margin-top: 20px;" id="zone_resultats"></div>
-          </div>
-        </div>
+
+    <div id="page-content-wrapper" style="margin-top: 20%;">
+      <div class="col-lg-12" id="div-tab">
+        <div style="margin-right: 3%;" style="" id="zone_resultats"></div>
       </div>
     </div>
+
   </div>
 
 </body>

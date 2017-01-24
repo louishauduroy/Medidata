@@ -1,5 +1,5 @@
 body {
-    overflow-x: hidden;
+
  }
 
 /* Toggle Styles */
@@ -45,6 +45,21 @@ body {
     position: absolute;
     margin-right: -250px;
 }
+
+#div-tab {
+  overflow-x: : scroll;
+  white-space: nowrap;
+}
+
+#zone_resultats {
+  display: inline-block;
+}
+
+.jumbotron {
+  width: 100%;
+  position: fixed;
+}
+
 
 /* Sidebar Styles */
 

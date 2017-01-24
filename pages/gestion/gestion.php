@@ -77,6 +77,20 @@ if (!isset($_SESSION['username'])){
               <div class="form-group">
                 <label for="name">Nom du champ:</label>
                 <input type="text" class="form-control" id="nameAdd" placeholder="Entrer un champ">
+                <select style='margin-top: 10px;' class="selectpicker show-tick">
+                    <option>TEXT</option>
+                    <optgroup label="INT">
+                      <option>INT(11)</option>
+                      <option>INT(100)</option>
+                    </optgroup>
+                    <optgroup label="VARCHAR">
+                      <option>VARCHAR(11)</option>
+                      <option>VARCHAR(100)</option>
+                      <option>VARCHAR(255)</option>
+                    </optgroup>
+                    <option>DATE</option>
+                    <option>TIME</option>
+                </select>
               </div>
               <p style="text-align: center; color: red;" class="add_message"></p>
               <button style="margin: 0;" type="button" class="btn btn-default" id="btn-add">Ajouter</button>

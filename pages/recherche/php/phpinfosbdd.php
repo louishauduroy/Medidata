@@ -6,7 +6,7 @@
 			$stringHtml=""; //construction du retour html
 
 
-			$stringHtml.= "<table class=\"resultats text-center table table-hover table-responsive table-striped\" id=\"datatable\">";
+			$stringHtml.= "<div class='wrap-login'><table class=\"resultats text-center table table-hover table-responsive table-striped\" id=\"datatable\">";
 
 			$stringHtml.= "<tr>";
 
@@ -67,12 +67,12 @@
 					$stringHtml.= "<td>$temp</td>";
 				}
 				$id=$donnees['id_patient'];
-				$stringHtml.= "<td><button style='margin: 0; padding: 0;' type='button' class='btn btn-success btn-lg btn-block'><a href='../certificat/setChamps.php?id_patient=$id' target='_blank'>Certif</a></button></td>";
+				$stringHtml.= "<td><button style='margin: 0; padding: 0;' type='button' class='btn btn-success btn-lg btn-block'><a href='certificat/setChamps.php?id_patient=$id' target='_blank'>Certif</a></button></td>";
 				$stringHtml.= "</tr>";
 
 			}
 
-			$stringHtml.= "</table>";
+			$stringHtml.= "</table></div>";
 
 
 			echo $stringHtml;
