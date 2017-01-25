@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  
   $.post("php/getChamps.php", false)
     .done(function(data) {
       $('#liste').html(data);
@@ -37,17 +37,17 @@ $(document).ready(function() {
 
     $.post("php/delChamps.php", { champs: champs })
       .done(function(data) {
-        if(data == "Ce champs n'existe pas!"){
-          $('.del_message').css('color','red');
-          $('.del_message').text(data);
-        }
-        else {
+        if(data == 'Champ supprimé !'){
           $('.del_message').text(data);
           $('.del_message').css('color','#0BDA51');
           $.post("php/getChamps.php", false)
             .done(function(data) {
               $('#liste').html(data);
           });
+        }
+        else {
+          $('.del_message').css('color','red');
+          $('.del_message').text(data);
         }
       });
     $('#nameDel').val("");

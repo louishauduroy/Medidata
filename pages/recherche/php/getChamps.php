@@ -15,6 +15,9 @@ while ($resultat = $req->fetch())
     <input type='date' id='$name' class='form-control data' placeholder='JJ-MM-YYYY'>
     </p>";
   }
+  else if (strpos($name, "heure") !== false) {
+    
+  }
   else {
     $stringHtml.= "<p style='color: #ffffff; margin-top: 20px; padding-left: 20px; padding-right: 20px;'>$name
     <input type='text' id='$name' class='form-control data' placeholder='Enter'>
