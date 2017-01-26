@@ -16,7 +16,14 @@ while ($resultat = $req->fetch())
     </p>";
   }
   else if (strpos($name, "heure") !== false) {
-    
+    $stringHtml.= "<p style='color: #ffffff; margin-top: 20px; padding-left: 20px; padding-right: 20px;'>$name
+    <input id='$name' type='text' class='basicExample form-control data time' placeholder='Heure'/>
+    <script>
+        $(function() {
+            $('.basicExample').timepicker( {'timeFormat': 'H:i:s'} );
+        });
+    </script>
+    </p>";
   }
   else {
     $stringHtml.= "<p style='color: #ffffff; margin-top: 20px; padding-left: 20px; padding-right: 20px;'>$name

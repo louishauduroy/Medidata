@@ -19,11 +19,13 @@ if (!isset($_SESSION['username'])){
   <link rel="stylesheet" href="../login/login.css">
   <link rel="stylesheet" href="../mainpage/accueil.css">
   <link rel="stylesheet" href="recherche.css">
+  <link rel="stylesheet" href="../../jquery_bootstrap/jquery.timepicker.css">
 
   <script src="../../jquery_bootstrap/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="../../jquery_bootstrap/bootstrap.min.js"></script>
   <script type="text/javascript" src="../mainpage/accueil.js"></script>
   <script type="text/javascript" src="recherche.js"></script>
+  <script type="text/javascript" src="../../jquery_bootstrap/jquery.timepicker.min.js"></script>
 
 </head>
 
