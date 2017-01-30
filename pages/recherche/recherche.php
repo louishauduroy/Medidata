@@ -67,7 +67,7 @@ if (!isset($_SESSION['username'])){
 
     <div class="jumbotron text-center bg-blue">
       <h1 style="">Recherche Database</h1>
-      <a href="#menu-toggle" style="margin: 0;" class="btn btn-default btn-lg" id="menu-toggle">Critères recherche</a>
+      <a href="#menu-toggle" style="margin: 0;" class="btn btn-default btn-lg" id="menu-toggle">Critères de recherche</a>
     </div>
 
     <div id="page-content-wrapper" style="margin-top: 20%;">
