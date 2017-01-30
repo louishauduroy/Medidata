@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $( "#zone_resultats" ).load("php/phpinfosbdd.php?");
 
   $("#menu-toggle").click(function(e) {
       e.preventDefault();

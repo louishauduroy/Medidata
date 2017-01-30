@@ -67,7 +67,17 @@ if (!isset($_SESSION['username'])){
 
     <div class="tab-content">
       <div class="tab-pane" id="graphiques">
-        <p>Hello graph</p>
+        <h2>Créer votre graphique:</h2>
+        <p>Champs 1:
+        <div class="champs">
+        </div></p>
+
+        <p>Champs 2:
+        <div class="champs">
+        </div></p>
+
+        <button type="button" class="btn btn-warning btn-lg" name="button">Créer</button>
+
       </div>
       <div class="tab-pane" id="statistiques">
         <p>Hello stats</p>
