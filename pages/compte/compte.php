@@ -44,7 +44,7 @@ if (!isset($_SESSION['username'])){
             <a style="color: #ffffff;" href="#" class="username dropdown-toggle" data-toggle="dropdown">name <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a style="color: #00C4E1;" href="#">Compte</a></li>
-              <li><a class="logout" style="color: #00C4E1;" href="">Logout</a></li>
+              <li><a class="logout" style="color: #00C4E1;" href="">Déconnexion</a></li>
             </ul>
           </li>
         </ul>
@@ -72,11 +72,11 @@ if (!isset($_SESSION['username'])){
           <input type="password" class="form-control" id="Nmdp" placeholder="Nouveau Password">
         </div>
         <div class="form-group">
-          <label for="">Confirm :</label>
+          <label for="">Confirmez :</label>
           <input type="password" class="form-control" id="Nmdp2" placeholder="Nouveau Password">
         </div>
         <p style="text-align: center; color: red;" class="mdp_message"></p>
-        <button type="button" class="btn-mdp btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
+        <button type="button" class="btn-mdp btn btn-default btn-lg btn-block" name="button">VALIDEZ</button>
       </form>
     </div>
 
@@ -96,7 +96,7 @@ if (!isset($_SESSION['username'])){
           <input type="password" class="form-control" id="mdp" placeholder="Password">
         </div>
         <p style="text-align: center; color: red;" class="email_message"></p>
-        <button type="button" class="btn-email btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
+        <button type="button" class="btn-email btn btn-default btn-lg btn-block" name="button">VALIDEZ</button>
       </form>
     </div>
 
@@ -116,7 +116,7 @@ if (!isset($_SESSION['username'])){
           <input type="password" class="form-control" id="mdp2" placeholder="Password">
         </div>
         <p style="text-align: center; color: red;" class="username_message"></p>
-        <button type="button" class="btn-username btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
+        <button type="button" class="btn-username btn btn-default btn-lg btn-block" name="button">VALIDEZ</button>
       </form>
     </div>
   </div>

@@ -42,7 +42,7 @@ if (!isset($_SESSION['username'])){
             <a style="color: #ffffff;" href="#" class="username dropdown-toggle" data-toggle="dropdown">name <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a style="color: #00C4E1;" href="../compte/compte.php">Compte</a></li>
-              <li><a class="logout" style="color: #00C4E1;" href="">Logout</a></li>
+              <li><a class="logout" style="color: #00C4E1;" href="">Déconnexion</a></li>
             </ul>
           </li>
         </ul>

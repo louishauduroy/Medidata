@@ -47,7 +47,7 @@ if (!isset($_SESSION['username'])){
             <a style="color: #ffffff;" href="#" class="username dropdown-toggle" data-toggle="dropdown">name <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a style="color: #00C4E1;" href="../compte/compte.php">Compte</a></li>
-              <li><a class="logout" style="color: #00C4E1;" href="">Logout</a></li>
+              <li><a class="logout" style="color: #00C4E1;" href="">Déconnexion</a></li>
             </ul>
           </li>
         </ul>
@@ -61,7 +61,7 @@ if (!isset($_SESSION['username'])){
   <div style="padding-top: 50px;" id="wrapper">
 
     <div id="sidebar-wrapper">
-      <button style='' type='button' id='searchbutton' class='btn btn-warning btn-lg btn-block'>SEARCH</button>
+      <button style='' type='button' id='searchbutton' class='btn btn-warning btn-lg btn-block'>RECHERCHE</button>
       <ul style="margin-top: 50px; padding-bottom: 100px;" class="sidebar-nav"></ul>
     </div>
 

@@ -33,7 +33,7 @@ if (isset($_SESSION['username'] )){
     <div class="row">
       <div class="wrap-login col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
         <form>
-          <h1 class ="titre_login">Login</h1>
+          <h1 class ="titre_login">Identification</h1>
           <div class="form-group">
             <label for="">Adresse Email :</label>
             <input type="email" class="form-control" id="email" placeholder="Email">
@@ -43,7 +43,7 @@ if (isset($_SESSION['username'] )){
             <input type="password" class="form-control" id="password" placeholder="Password">
           </div>
           <p class="login_message"></p>
-          <button type="button" class="btn-login btn btn-default btn-lg btn-block" name="button">SUBMIT</button>
+          <button type="button" class="btn-login btn btn-default btn-lg btn-block" name="button">Se connecter</button>
         </form>
 
       </div>

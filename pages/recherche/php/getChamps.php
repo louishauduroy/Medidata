@@ -27,7 +27,7 @@ while ($resultat = $req->fetch())
   }
   else {
     $stringHtml.= "<p style='color: #ffffff; margin-top: 20px; padding-left: 20px; padding-right: 20px;'>$name
-    <input type='text' id='$name' class='form-control data' placeholder='Enter'>
+    <input type='text' id='$name' class='form-control data' placeholder='Entrez une valeur'>
     </p>";
   }
 
