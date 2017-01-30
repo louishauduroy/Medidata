@@ -22,7 +22,7 @@ if(isset($_POST["email"]) && isset($_POST["mdp"]) && isset($_POST["username"])) 
       "mdp" => $password,
       "email" => $email));
       $req2->closeCursor();
-    echo 'Creation reussi';
+    echo 'Creation reussie';
   } else { echo 'Email existe déjà'; }
   $req->closeCursor();
 } else { echo 'failed'; }

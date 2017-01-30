@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   $.post("php/getChamps.php", false)
     .done(function(data) {
       $('#liste').html(data);
@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     $.post("php/addChamps.php", { champs: champs, type: type })
       .done(function(data) {
-        if(data == "Champs ajouté !"){
+        if(data == "Champ ajouté !"){
           $('.add_message').text(data);
           $('.add_message').css('color','#0BDA51');
           $.post("php/getChamps.php", false)

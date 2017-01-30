@@ -12,26 +12,26 @@ if(isset($_POST["champs"]) && isset($_POST["type"]) && $_POST["champs"]!="") {
   if(!$resultat){
 		if( $type == 'DATE' ){
 			if (stripos($champs, 'date') !== FALSE){
-				if (stripos($champs, 'heure') !== FALSE) { echo 'Votre champs ne peut contenir le mot "heure"!'; }
+				if (stripos($champs, 'heure') !== FALSE) { echo 'Votre champ ne peut contenir le mot "heure"!'; }
 				else {
-					$req2 = $bdd->prepare("INSERT INTO champs (id, name) VALUES ('$type', '$champs')");
+					$req2 = $bdd->prepare("INSERT INTO champs (id, name) VALUES (NULL, '$champs')");
 			    $req2->execute();
 			    $req2->closeCursor();
 
-					$requete = "ALTER TABLE certificat ADD $champs $type NOT NULL";
+					$requete = "ALTER TABLE certificat ADD $champs $type";
 
 			    $req3 = $bdd->prepare($requete);
 			    $req3->execute();
 			    $req3->closeCursor();
-					echo 'Champs ajouté !';
+					echo 'Champ ajouté !';
 				}
-			} else { echo 'Votre champs doit comporter le mot "date"!'; }
+			} else { echo 'Votre champ doit comporter le mot "date"!'; }
 		}
 		else if ( $type == 'TIME' ){
 			if (stripos($champs, 'heure') !== FALSE){
-				if (stripos($champs, 'date') !== FALSE) { echo 'Votre champs ne peut contenir le mot "date"!'; }
+				if (stripos($champs, 'date') !== FALSE) { echo 'Votre champ ne peut contenir le mot "date"!'; }
 				else {
-					$req2 = $bdd->prepare("INSERT INTO champs (id, name) VALUES ('$type', '$champs')");
+					$req2 = $bdd->prepare("INSERT INTO champs (id, name) VALUES (NULL, '$champs')");
 			    $req2->execute();
 			    $req2->closeCursor();
 
@@ -42,13 +42,13 @@ if(isset($_POST["champs"]) && isset($_POST["type"]) && $_POST["champs"]!="") {
 			    $req3->closeCursor();
 					echo 'Champs ajouté !';
 				}
-			} else { echo 'Votre champs doit comporter le mot "heure"!'; }
+			} else { echo 'Votre champ doit comporter le mot "heure"!'; }
 		}
     else {
-			if (stripos($champs, 'date') !== FALSE){ echo 'Votre champs ne peut comporter le mot "date"!'; }
-			else if ( stripos($champs, 'heure') !== FALSE) { echo 'Votre champs ne peut comporter le mot "heure"!'; }
+			if (stripos($champs, 'date') !== FALSE){ echo 'Votre champ ne peut comporter le mot "date"!'; }
+			else if ( stripos($champs, 'heure') !== FALSE) { echo 'Votre champ ne peut comporter le mot "heure"!'; }
 			else {
-				$req2 = $bdd->prepare("INSERT INTO champs (id, name) VALUES ('$type', '$champs')");
+				$req2 = $bdd->prepare("INSERT INTO champs (id, name) VALUES (NULL, '$champs')");
 		    $req2->execute();
 		    $req2->closeCursor();
 
@@ -64,7 +64,7 @@ if(isset($_POST["champs"]) && isset($_POST["type"]) && $_POST["champs"]!="") {
 		    echo 'Champs ajouté !';
 			}
 		}
-  } else { echo 'Ce champs existe déja!'; }
+  } else { echo 'Ce champ existe déja!'; }
   $req->closeCursor();
 } else { echo 'Entrez les info'; }
 

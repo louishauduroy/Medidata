@@ -17,7 +17,7 @@ if(isset($_POST["champs"])) {
 	  $req->execute();
 	  $resultat = $req->fetch();
 
-	  if(!$resultat){ echo "Ce champs n'existe pas!"; }
+	  if(!$resultat){ echo "Ce champ n'existe pas!"; }
 	  else {
 	    $req2 = $bdd->prepare("DELETE FROM champs WHERE champs.name = '$champs'");
 	    $req2->execute();
