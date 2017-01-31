@@ -72,7 +72,7 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 		for($i=0;$i<5;$i++){
 			$x+=5;
 			$pdf->SetXY($x,36);
-			$pdf->Write(5,substr($row["code_postal"], $i,1));
+			$pdf->Write(5,substr($row["code_postal_deces"], $i,1));
 		}
 
         $pdf->SetXY(26,40);
