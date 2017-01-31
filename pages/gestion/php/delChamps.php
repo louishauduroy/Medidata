@@ -7,7 +7,7 @@ if(isset($_POST["champs"])) {
 	|| $champs == 'nom_medecin' || $champs == 'prenom_medecin' || $champs == 'maladies_a' || $champs == 'intervalle_a' || $champs == 'maladies_b' || $champs == 'intervalle_b'
 	|| $champs == 'maladies_c' || $champs == 'intervalle_c' || $champs == 'maladies_d' || $champs == 'intervalle_d' || $champs == 'autres_contributions'
 	|| $champs == 'intervalle_autres' || $champs == 'grossesse' || $champs == 'fin_grossesse_mois' || $champs == 'fin_grossesse_jours' || $champs == 'lieu_accident'
-	|| $champs == 'accident_travail' || $champs == 'autopsie' || $champs == 'lieu_deces' || $champs == 'mise_biere'){
+	|| $champs == 'accident_travail' || $champs == 'autopsie' || $champs == 'lieu_deces' || $champs == 'mise_biere' || $champs == 'commune_domicile'|| $champs == 'code_postal_domicile'){
 		echo 'Impossible de supprimer ce champ';
 	}
 	else {
