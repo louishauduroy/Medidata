@@ -11,7 +11,11 @@ $(document).ready(function() {
     $.post("../../phpBDD/connexion.php", { email: email, mdp: mdp })
       .done(function(data) {
         if(data == 'Vous êtes connecté !'){
+          $('.login_message').css('color','#0BDA51');
           window.location = '../mainpage/accueil.php';
+        }
+        else {
+          $('.login_message').css('color','red');
         }
         $('.login_message').text(data);
       });
