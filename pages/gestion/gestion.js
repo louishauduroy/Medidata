@@ -14,8 +14,8 @@ $(document).ready(function() {
     $.post("php/addChamps.php", { champs: champs, type: type })
       .done(function(data) {
         if(data == "Champ ajouté !"){
-          $('.add_message').text(data);
           $('.add_message').css('color','#0BDA51');
+          $('.add_message').text(data);
           $.post("php/getChamps.php", false)
             .done(function(data) {
               $('#liste').html(data);
@@ -38,8 +38,8 @@ $(document).ready(function() {
     $.post("php/delChamps.php", { champs: champs })
       .done(function(data) {
         if(data == 'Champ supprimé !'){
-          $('.del_message').text(data);
           $('.del_message').css('color','#0BDA51');
+          $('.del_message').text(data);
           $.post("php/getChamps.php", false)
             .done(function(data) {
               $('#liste').html(data);
