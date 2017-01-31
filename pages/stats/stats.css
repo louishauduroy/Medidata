@@ -1,0 +1,20 @@
+.nb {
+	margin-top: 20px;
+	font-size: 60px;
+	
+}
+
+.divInterne{
+	height: 300px; 
+	width: 95%;
+	position: relative; 
+	margin:auto;
+}
+
+
+
+.box {
+	border: 18px solid #00C4E1;
+	height: 500px;
+	padding: 5px;
+}

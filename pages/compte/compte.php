@@ -65,15 +65,15 @@ if (!isset($_SESSION['username'])){
         </div>
         <div class="form-group">
           <label for="">Ancien mot de passe :</label>
-          <input type="password" class="form-control" id="Amdp" placeholder="Ancien Password">
+          <input type="password" class="form-control" id="Amdp" placeholder="Ancien mot de passe">
         </div>
         <div class="form-group">
           <label for="">Nouveau mot de passe :</label>
-          <input type="password" class="form-control" id="Nmdp" placeholder="Nouveau Password">
+          <input type="password" class="form-control" id="Nmdp" placeholder="Nouveau mot de passe">
         </div>
         <div class="form-group">
           <label for="">Confirmez :</label>
-          <input type="password" class="form-control" id="Nmdp2" placeholder="Nouveau Password">
+          <input type="password" class="form-control" id="Nmdp2" placeholder="Nouveau mot de passe">
         </div>
         <p style="text-align: center; color: red;" class="mdp_message"></p>
         <button type="button" class="btn-mdp btn btn-default btn-lg btn-block" name="button">VALIDEZ</button>
@@ -93,7 +93,7 @@ if (!isset($_SESSION['username'])){
         </div>
         <div class="form-group">
           <label for="">Mot de passe :</label>
-          <input type="password" class="form-control" id="mdp" placeholder="Password">
+          <input type="password" class="form-control" id="mdp" placeholder="Mot de passe">
         </div>
         <p style="text-align: center; color: red;" class="email_message"></p>
         <button type="button" class="btn-email btn btn-default btn-lg btn-block" name="button">VALIDEZ</button>
@@ -113,7 +113,7 @@ if (!isset($_SESSION['username'])){
         </div>
         <div class="form-group">
           <label for="">Mot de passe :</label>
-          <input type="password" class="form-control" id="mdp2" placeholder="Password">
+          <input type="password" class="form-control" id="mdp2" placeholder="Mot de passe">
         </div>
         <p style="text-align: center; color: red;" class="username_message"></p>
         <button type="button" class="btn-username btn btn-default btn-lg btn-block" name="button">VALIDEZ</button>

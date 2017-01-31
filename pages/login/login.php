@@ -40,7 +40,7 @@ if (isset($_SESSION['username'] )){
           </div>
           <div class="form-group">
             <label for="">Mot de passe :</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="Mot de passe" class="form-control" id="password" placeholder="Password">
           </div>
           <p class="login_message"></p>
           <button type="button" class="btn-login btn btn-default btn-lg btn-block" name="button">Se connecter</button>

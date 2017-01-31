@@ -18,10 +18,15 @@ if (!isset($_SESSION['username'])){
   <link rel="stylesheet" href="../../jquery_bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../login/login.css">
   <link rel="stylesheet" href="../mainpage/accueil.css">
+  <link rel="stylesheet" href="stats.css">
 
   <script src="../../jquery_bootstrap/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="../../jquery_bootstrap/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+
   <script type="text/javascript" src="../mainpage/accueil.js"></script>
+   <script src="raphael.js"></script>
   <script type="text/javascript" src="stats.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 
@@ -45,7 +50,7 @@ if (!isset($_SESSION['username'])){
             <a style="color: #ffffff;" href="#" class="username dropdown-toggle" data-toggle="dropdown">name <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a style="color: #00C4E1;" href="../compte/compte.php">Compte</a></li>
-              <li><a class="logout" style="color: #00C4E1;" href="">Déconnexion</a></li>
+              <li><a class="logout" style="color: #00C4E1;" href="">Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -56,32 +61,47 @@ if (!isset($_SESSION['username'])){
 
 <body >
   <div style="margin-top: 100px;" class="container col-xl-12 col-md-12 col-xs-12">
-    <ul style="margin-bottom: 50px;" class="nav nav-tabs">
-      <li>
-        <a class="topmenu" href="#graphiques" data-toggle="tab">Grahpiques</a>
-      </li>
-      <li>
-        <a class="topmenu" href="#statistiques" data-toggle="tab">Numériques</a>
-      </li>
-    </ul>
 
     <div class="tab-content">
-      <div class="tab-pane" id="graphiques">
-        <h2>Créer votre graphique:</h2>
-        <p>Champs 1:
-        <div class="champs">
-        </div></p>
+      <div class="container-fluid text-center ">
+			<div class="row">
+				<div class="col-md-3 box" id="test">
+				  <h2>Aujourd'hui</h2>
+				  <div id="morts_ajd_nb" class="nb" width="19%" height="150px"></div>
+				  <h3>décès</h3>
+				   <hr>
+				  <h2>Hier</h2>
+				  <div id="morts_hier_nb" class="nb" width="19%" height="150px"></div>
+				  <h3>décès</h3>
+				</div>
 
-        <p>Champs 2:
-        <div class="champs">
-        </div></p>
+				<div class="col-md-9 box">
+				  <h3>Par tranches d'âge:</h3>
+				  <div id="legende"  class="divInterne" style="height: 50px;"></div>
+				  <div  id="bar1"  class="divInterne" style="height: 250px;"></div>
+				</div>
 
-        <button type="button" class="btn btn-warning btn-lg" name="button">Créer</button>
 
-      </div>
-      <div class="tab-pane" id="statistiques">
-        <p>Hello stats</p>
-      </div>
+
+			</div>
+
+			<div class="row">
+
+
+				<div class="col-md-8 box">
+				  <h3>Evolution hebdomadaire:</h3>
+
+				  <div  id="semaine" class="divInterne"></div>
+				</div>
+
+				<div class="col-md-4 box">
+				  <h3>Total semaine:</h3>
+				  <div id="total"  class="nb"></div>
+				  <h3>décès</h3>
+				</div>
+
+			</div>
+		</div>
     </div>
 
   </div>
