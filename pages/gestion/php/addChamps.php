@@ -40,7 +40,7 @@ if(isset($_POST["champs"]) && isset($_POST["type"]) && $_POST["champs"]!="") {
 			    $req3 = $bdd->prepare($requete);
 			    $req3->execute();
 			    $req3->closeCursor();
-					echo 'Champs ajouté !';
+					echo 'Champ ajouté !';
 				}
 			} else { echo 'Votre champ doit comporter le mot "heure"!'; }
 		}
@@ -61,7 +61,7 @@ if(isset($_POST["champs"]) && isset($_POST["type"]) && $_POST["champs"]!="") {
 		    $req3 = $bdd->prepare($requete);
 		    $req3->execute();
 		    $req3->closeCursor();
-		    echo 'Champs ajouté !';
+		    echo 'Champ ajouté !';
 			}
 		}
   } else { echo 'Ce champ existe déja!'; }

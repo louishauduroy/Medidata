@@ -8,12 +8,12 @@ $(document).ready(function() {
   $('#btn-add').click(function() {
     var champs = $('#nameAdd').val();
     var type = $('.selectpicker').find("option:selected").text();
-    console.log("Type="+ type);
     $('.del_message').text("");
 
     $.post("php/addChamps.php", { champs: champs, type: type })
       .done(function(data) {
-        if(data == "Champ ajouté !"){
+        console.log(data);
+        if(data == 'Champ ajouté !'){
           $('.add_message').css('color','#0BDA51');
           $('.add_message').text(data);
           $.post("php/getChamps.php", false)
