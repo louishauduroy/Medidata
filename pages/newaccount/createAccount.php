@@ -7,6 +7,20 @@ if (!isset($_SESSION['username'])){
     <script> window.location.replace('../login/login.php') </script>
   <?php
 }
+else {
+  include '../../phpBDD/connexionBDD.php';
+  $name = $_SESSION['username'];
+  $requete = "SELECT type FROM utilisateurs WHERE name = '$name'";
+
+  $req = $bdd->prepare($requete);
+  $req->execute();
+  $resultat = $req->fetch();
+  if($resultat[0] != 'admin'){
+    ?>
+      <script> window.location.replace('../mainpage/accueil.php') </script>
+    <?php
+  }
+}
 ?>
 
 <html>

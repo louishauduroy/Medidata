@@ -22,7 +22,9 @@ $(document).ready(function() {
           .done(function(data) {
             $('.login_message').text(data);
           });
-      }else { $('.login_message').text('Confirmez les même mot de passe'); }
+      }else {
+        $('.login_message').text('Confirmez les même mot de passe');
+      }
     }
   });
 
