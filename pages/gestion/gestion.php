@@ -78,7 +78,6 @@ if (!isset($_SESSION['username'])){
                 <label for="name">Nom du champ:</label>
                 <input type="text" class="form-control" id="nameAdd" placeholder="Entrer un champ">
                 <select style='margin-top: 10px;' class="selectpicker show-tick">
-                    <option>TEXT</option>
                     <optgroup label="INT">
                       <option>INT(11)</option>
                       <option>INT(100)</option>
