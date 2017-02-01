@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 
+<?php
+session_start();
+if (!isset($_SESSION['username'])){
+  ?>
+    <script> window.location.replace('../login/login.php') </script>
+  <?php
+}
+?>
+
 <html>
 
 <head>
@@ -26,29 +35,30 @@
     <div class="row">
       <div style="margin-bottom: 40px;" class="wrap-login col-md-4 col-md-offset-4">
         <form>
-          <h1 class ="titre_login">Create Account in Medidata</h1>
+          <h1 class ="titre_login">Créer un compte Medidata</h1>
           <div class="form-group">
-            <label for="">Email address</label>
+            <label for="">Addresse Email</label>
             <input type="email" class="form-control" id="email" placeholder="Email">
           </div>
           <div class="form-group">
-            <label for="">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <label for="">Mot de passe</label>
+            <input type="password" class="form-control" id="password" placeholder="Mot de passe">
           </div>
           <div class="form-group">
-            <label for="">Confirm</label>
-            <input type="password" class="form-control" id="password2" placeholder="Password">
+            <label for="">Confirmez</label>
+            <input type="password" class="form-control" id="password2" placeholder="Mot de passe">
           </div>
           <div class="form-group">
             <label for="">Username</label>
             <input type="text" class="form-control" id="username" placeholder="Username">
           </div>
           <p class="login_message"></p>
-          <button type="button" class="btn-login btn btn-default btn-lg btn-block" name="button">CREATE</button>
+          <button type="button" class="btn-login btn btn-default btn-lg btn-block" name="button">CRÉER</button>
         </form>
 
       </div>
     </div>
+    <p style="text-align: center; margin-bottom: 50px;"><a href="../mainpage/accueil.php">Retour Accueil</a></p>
   </div>
 
 </body>
