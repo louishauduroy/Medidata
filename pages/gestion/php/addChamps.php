@@ -18,7 +18,7 @@ if(isset($_POST["champs"]) && isset($_POST["type"]) && $_POST["champs"]!="") {
 			    $req2->execute();
 			    $req2->closeCursor();
 
-					$requete = "ALTER TABLE certificat ADD $champs $type NOT NULL DEFAULT '1900-01-01'";
+					$requete = "ALTER TABLE certificat ADD $champs $type NULL DEFAULT '1900-01-01'";
 
 			    $req3 = $bdd->prepare($requete);
 			    $req3->execute();
@@ -35,7 +35,7 @@ if(isset($_POST["champs"]) && isset($_POST["type"]) && $_POST["champs"]!="") {
 			    $req2->execute();
 			    $req2->closeCursor();
 
-					$requete = "ALTER TABLE certificat ADD $champs $type NOT NULL DEFAULT '00:00:00'";
+					$requete = "ALTER TABLE certificat ADD $champs $type NULL DEFAULT '00:00:00'";
 
 			    $req3 = $bdd->prepare($requete);
 			    $req3->execute();
@@ -53,11 +53,11 @@ if(isset($_POST["champs"]) && isset($_POST["type"]) && $_POST["champs"]!="") {
 		    $req2->closeCursor();
 
 				if(stripos($type, 'INT') !== FALSE){
-					$requete = "ALTER TABLE certificat ADD $champs $type NOT NULL DEFAULT 0";
+					$requete = "ALTER TABLE certificat ADD $champs $type NULL DEFAULT 0";
 				}
 				else {
 				//ALTER TABLE `certificat` ADD COLUMN `hello` varchar(36) NOT NULL DEFAULT 'coucou'
-					$requete = "ALTER TABLE certificat ADD COLUMN $champs $type NOT NULL DEFAULT ''";
+					$requete = "ALTER TABLE certificat ADD COLUMN $champs $type NULL DEFAULT ''";
 				}
 		    $req3 = $bdd->prepare($requete);
 		    $req3->execute();
