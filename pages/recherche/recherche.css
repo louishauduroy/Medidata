@@ -100,3 +100,11 @@
 #menu-toggle {
   margin: 0;
 }
+
+#certif {
+  color: white;
+}
+
+#certif:link {
+  text-decoration:none; 
+}

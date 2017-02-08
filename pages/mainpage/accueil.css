@@ -1,8 +1,8 @@
-body > div {
+main > div {
   margin-top: 30px;
 }
 
-body > div > h3 {
+main > div > h3 {
   text-align: center;
   color: #A4A3A3;
   margin-top: 50px;

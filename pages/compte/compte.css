@@ -1,8 +1,8 @@
-body > div {
+main > div {
   padding-top: 50px;
 }
 
-body > div > h1 {
+main > div > h1 {
   text-align: center;
   font-size: 60px;
   color: #A4A3A3;

@@ -24,18 +24,22 @@ if (!isset($_SESSION['username'])){
 
 </head>
 
-<header>
-  <?php include '../common/menu.php';  ?>
-</header>
-
 <body>
-  <div class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
-    <img class="logo" src="../../img/logo.png" alt="">
-  </div>
-  <div class="col-md-12 col-xs-12 col-sm-12">
-    <h3>Medidata est un outil développé par 4 étudiants ingénieurs de l'ECE Paris.
-      Il permet de centraliser les données des centres hospitaliers vers les Agences Régionales de Santé (ARS).</h3>
-  </div>
+
+  <header>
+    <?php include '../common/menu.php';  ?>
+  </header>
+
+  <main>
+    <div class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
+      <img class="logo" src="../../img/logo.png" alt="">
+    </div>
+    <div class="col-md-12 col-xs-12 col-sm-12">
+      <h3>Medidata est un outil développé par 4 étudiants ingénieurs de l'ECE Paris.
+        Il permet de centraliser les données des centres hospitaliers vers les Agences Régionales de Santé (ARS).</h3>
+    </div>
+  </main>
+
 </body>
 
 </html>

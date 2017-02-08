@@ -1,21 +1,20 @@
 <?php
+include "../../../phpBDD/connexionBDD.php";
 
-	include "../../../phpBDD/connexionBDD.php";
+$req = $bdd->prepare('SELECT * FROM champs');
+$req->execute();
 
-  $req = $bdd->prepare('SELECT * FROM champs');
-  $req->execute();
+$stringHtml= "<select class='selectpicker show-tick'>";
 
-	$stringHtml= "<select class='selectpicker show-tick'>";
+while ($resultat = $req->fetch())
+{
+	$name=$resultat['name'];
+	$stringHtml.= "<option>$name</option>";
+}
 
-	while ($resultat = $req->fetch())
-	{
-		$name=$resultat['name'];
-		$stringHtml.= "<option>$name</option>";
-	}
+$stringHtml.= "</select>";
 
-  $stringHtml.= "</select>";
+echo $stringHtml;
 
-	echo $stringHtml;
-
-	$req->closeCursor();
+$req->closeCursor();
 ?>

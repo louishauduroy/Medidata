@@ -20,15 +20,15 @@ $(document).ready(function() {
 
     $('.data').each(function() {
       if (this.value != ""){
-          values[this.id] = this.value;
-          console.log(this.id + "=" + values[this.id]);
+          var value = encodeURIComponent(this.value.trim())
+          values[this.id] = value;
           if (premier == true)
           {
-            lien = lien + "?" + this.id + "=" + this.value;
+            lien = lien + "?" + this.id + "=" + value;
             premier = false;
           }
           else {
-            lien = lien + "&&" + this.id + "=" + this.value + "";
+            lien = lien + "&&" + this.id + "=" + value + "";
           }
       }
     });

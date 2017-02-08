@@ -26,15 +26,17 @@ if (!isset($_SESSION['username'])){
 
 </head>
 
-<header>
-  <?php include '../common/menu.php';  ?>
-</header>
-
 <body>
 
-    <div class="container-fluid text-center">
+  <header>
+    <?php include '../common/menu.php';  ?>
+  </header>
+
+  <main>
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 col-xs-6 bg-lightgrey" id="">
+
+        <div class="col-md-6 col-sm-6 bg-lightgrey" id="">
           <div class="jumbotron text-center bg-blue">
             <h1>Sélection des champs</h1>
             <p>Définissez ici les données à récolter auprès des hopitaux.</p>
@@ -44,7 +46,8 @@ if (!isset($_SESSION['username'])){
         </div>
 
 
-        <div class="wrap-login col-md-offset-1 col-md-4 col-xs-4 col-xs-offset-1">
+        <div class="wrap-login text-center col-md-5 col-sm-5">
+
           <div class="row">
             <div class="col-md-12">
               <h3>Ajouter un champ</h3>
@@ -71,6 +74,7 @@ if (!isset($_SESSION['username'])){
               </form>
             </div>
           </div>
+
           <div class="row">
             <div class="col-md-12" id="">
               <h3>Supprimer un champ</h3>
@@ -84,10 +88,13 @@ if (!isset($_SESSION['username'])){
               </form>
             </div>
           </div>
+
         </div>
 
       </div>
     </div>
+  </main>
+
 </body>
 
 </html>

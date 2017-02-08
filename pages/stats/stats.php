@@ -29,57 +29,61 @@ if (!isset($_SESSION['username'])){
 
 </head>
 
-<header>
-  <?php include '../common/menu.php';  ?>
-</header>
+<body>
 
-<body >
-  <div style="margin-top: 100px;" class="container col-xl-12 col-md-12 col-xs-12">
+  <header>
+    <?php include '../common/menu.php';  ?>
+  </header>
 
-    <div class="tab-content">
-      <div class="container-fluid text-center ">
-			<div class="row">
-				<div class="col-md-3 box" id="test">
-				  <h2>Aujourd'hui</h2>
-				  <div id="morts_ajd_nb" class="nb" width="19%" height="150px"></div>
-				  <h3>décès</h3>
-				   <hr>
-				  <h2>Hier</h2>
-				  <div id="morts_hier_nb" class="nb" width="19%" height="150px"></div>
-				  <h3>décès</h3>
-				</div>
+  <main>
+    <div class="container col-xl-12 col-md-12 col-xs-12">
 
-				<div class="col-md-9 box">
-				  <h3>Par tranches d'âge:</h3>
-				  <div id="legende"  class="divInterne" style="height: 50px;"></div>
-				  <div  id="bar1"  class="divInterne" style="height: 250px;"></div>
-				</div>
+      <div class="tab-content">
+        <div class="container-fluid text-center ">
+  			<div class="row">
+  				<div class="col-md-3 box" id="test">
+  				  <h2>Aujourd'hui</h2>
+  				  <div id="morts_ajd_nb" class="nb" width="19%" height="150px"></div>
+  				  <h3>décès</h3>
+  				   <hr>
+  				  <h2>Hier</h2>
+  				  <div id="morts_hier_nb" class="nb" width="19%" height="150px"></div>
+  				  <h3>décès</h3>
+  				</div>
 
-
-
-			</div>
-
-			<div class="row">
+  				<div class="col-md-9 box">
+  				  <h3>Par tranches d'âge:</h3>
+  				  <div id="legende"  class="divInterne"></div>
+  				  <div  id="bar1"  class="divInterne"></div>
+  				</div>
 
 
-				<div class="col-md-8 box">
-				  <h3>Evolution hebdomadaire:</h3>
 
-				  <div  id="semaine" class="divInterne"></div>
-				</div>
+  			</div>
 
-				<div class="col-md-4 box">
-				  <h3>Total semaine:</h3>
-				  <div id="total"  class="nb"></div>
-				  <h3>décès</h3>
-				</div>
+  			<div class="row">
 
-			</div>
-		</div>
+
+  				<div class="col-md-8 box">
+  				  <h3>Evolution hebdomadaire:</h3>
+
+  				  <div  id="semaine" class="divInterne"></div>
+  				</div>
+
+  				<div class="col-md-4 box">
+  				  <h3>Total semaine:</h3>
+  				  <div id="total"  class="nb"></div>
+  				  <h3>décès</h3>
+  				</div>
+
+  			</div>
+  		</div>
+      </div>
+
     </div>
+    <canvas id="myChart"></canvas>
+  </main>
 
-  </div>
-  <canvas id="myChart"></canvas>
 </body>
 
 </html>

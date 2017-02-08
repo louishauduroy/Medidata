@@ -67,7 +67,11 @@
 					$stringHtml.= "<td>$temp</td>";
 				}
 				$id=$donnees['id_patient'];
-				$stringHtml.= "<td><button style='margin: 0; padding: 0;' type='button' class='btn btn-success btn-lg btn-block'><a href='certificat/setChamps.php?id_patient=$id' target='_blank'>Certif</a></button></td>";
+				$stringHtml.= "<td>
+													<button style='margin: 0; padding: 0;' type='button' class='btn btn-success btn-lg btn-block'>
+														<a href='certificat/setChamps.php?id_patient=$id' target='_blank' id='certif'>Certif</a>
+													</button>
+											</td>";
 				$stringHtml.= "</tr>";
 
 			}

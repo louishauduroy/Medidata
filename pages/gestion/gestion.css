@@ -1,4 +1,4 @@
-body > div {
+main > div {
   padding-top: 50px;
 }
 
@@ -10,9 +10,18 @@ body > div {
 }
 
 .wrap-login {
-  margin-bottom: 80px;
+  margin-left: 4%;
   position: fixed;
   left: 50%
+}
+
+@media(max-width:767px){
+  .wrap-login {
+    position:relative;
+    margin-right: 5%;
+    left: 0%;
+    margin-bottom: 20px;
+  }
 }
 
 .wrap-login > .row > div > h3 {

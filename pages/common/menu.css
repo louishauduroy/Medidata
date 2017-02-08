@@ -1,10 +1,17 @@
 @font-face {
-    font-family: 'exoregular';
-    src: url('../../font/exo-regular-webfont.woff2') format('woff2'),
-         url('../../font/ exo-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'exoregular';
+  src: url('../../font/exo_regular/exo-regular-webfont.woff2') format('woff2'),
+       url('../../font/exo_regular/exo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'exobold';
+  src: url('../../font/exo_bold/exo-bold-webfont.woff2') format('woff2'),
+       url('../../font/exo_bold/exo-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
