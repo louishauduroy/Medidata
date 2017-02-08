@@ -19,7 +19,7 @@ $(document).ready(function() {
     }
     else {
       if (mdp == mdp2){
-        $.post("newAccount.php", { email: email, mdp: mdp, username: username })
+        $.post("php/newAccount.php", { email: email, mdp: mdp, username: username })
           .done(function(data) {
             if(data=='Creation reussie') { $('.login_message').css('color','#0BDA51'); }
             else { $('.login_message').css('color','red'); }

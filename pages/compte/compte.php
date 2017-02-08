@@ -16,32 +16,32 @@ if (!isset($_SESSION['username'])){
   <title>Medidata</title>
 
   <link rel="stylesheet" href="../../jquery_bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="../login/login.css">
-  <link rel="stylesheet" href="../mainpage/accueil.css">
+  <link rel="stylesheet" href="../common/menu.css">
+  <link rel="stylesheet" href="compte.css">
 
-  <script src="../../jquery_bootstrap/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../../jquery_bootstrap/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="../../jquery_bootstrap/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../mainpage/accueil.js"></script>
+  <script type="text/javascript" src="../common/menu.js"></script>
   <script type="text/javascript" src="compte.js"></script>
 
 </head>
 
 <header>
-  <?php include '../mainpage/menu.php';  ?>
+  <?php include '../common/menu.php';  ?>
 </header>
 
 <body>
-  <div style="padding-top: 50px;">
-    <h1 style="text-align: center; font-size: 60px; color: #A4A3A3; margin-top: 50px; margin-bottom: 30px;">Gestion de compte</h1>
+  <div>
+    <h1>Gestion de compte</h1>
     <div class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
       <form>
         <h1 class ="titre_login">Changer votre mot de passe :</h1>
         <div class="form-group">
-          <label for="">Email :</label>
+          <label>Email :</label>
           <input type="email" class="form-control" id="email" placeholder="Email">
         </div>
         <div class="form-group">
-          <label for="">Ancien mot de passe :</label>
+          <label>Ancien mot de passe :</label>
           <input type="password" class="form-control" id="Amdp" placeholder="Ancien mot de passe">
         </div>
         <div class="form-group">
@@ -52,12 +52,12 @@ if (!isset($_SESSION['username'])){
           <label for="">Confirmez :</label>
           <input type="password" class="form-control" id="Nmdp2" placeholder="Nouveau mot de passe">
         </div>
-        <p style="text-align: center; color: red;" class="mdp_message"></p>
+        <p class="mdp_message"></p>
         <button type="button" class="btn-mdp btn btn-default btn-lg btn-block" name="button">VALIDEZ</button>
       </form>
     </div>
 
-    <div style="margin-top: 70px;" class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
+    <div class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
       <form>
         <h1 class ="titre_login">Changer votre email :</h1>
         <div class="form-group">
@@ -72,12 +72,12 @@ if (!isset($_SESSION['username'])){
           <label for="">Mot de passe :</label>
           <input type="password" class="form-control" id="mdp" placeholder="Mot de passe">
         </div>
-        <p style="text-align: center; color: red;" class="email_message"></p>
+        <p class="email_message"></p>
         <button type="button" class="btn-email btn btn-default btn-lg btn-block" name="button">VALIDEZ</button>
       </form>
     </div>
 
-    <div style="margin-top: 70px; margin-bottom: 70px;" class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
+    <div class="wrap-login col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1">
       <form>
         <h1 class ="titre_login">Changer votre username :</h1>
         <div class="form-group">
@@ -92,7 +92,7 @@ if (!isset($_SESSION['username'])){
           <label for="">Mot de passe :</label>
           <input type="password" class="form-control" id="mdp2" placeholder="Mot de passe">
         </div>
-        <p style="text-align: center; color: red;" class="username_message"></p>
+        <p class="username_message"></p>
         <button type="button" class="btn-username btn btn-default btn-lg btn-block" name="button">VALIDEZ</button>
       </form>
     </div>

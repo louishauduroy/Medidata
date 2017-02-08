@@ -1,11 +1,8 @@
-body {
-
- }
-
 /* Toggle Styles */
 
 #wrapper {
     padding-left: 0;
+    padding-top: 50px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -32,18 +29,19 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+  width: 250px;
 }
 
 #page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
+  margin-top: 200px;
+  width: 100%;
+  position: absolute;
+  padding: 15px;
 }
 
 #wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
+  position: absolute;
+  margin-right: -250px;
 }
 
 #div-tab {
@@ -53,6 +51,7 @@ body {
 
 #zone_resultats {
   display: inline-block;
+  margin-right: 3%;
 }
 
 .jumbotron {
@@ -64,29 +63,31 @@ body {
 /* Sidebar Styles */
 
 .sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 50px;
+  padding-bottom: 100px;
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
+  text-indent: 20px;
+  line-height: 40px;
 }
 
 .sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #999999;
+  display: block;
+  text-decoration: none;
+  color: #999999;
 }
 
 .sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.2);
 }
 
 .sidebar-nav li a:active,
@@ -95,3 +96,7 @@ body {
 }
 
 #sidebar { width: 40%; position: fixed; left: 40%; }
+
+#menu-toggle {
+  margin: 0;
+}

@@ -12,7 +12,7 @@
         <li><a href="../gestion/gestion.php">Gestion Champs</a></li>
         <li><a href="../recherche/recherche.php">Recherche</a></li>
         <li class="dropdown">
-          <a href="#" class="username dropdown-toggle" data-toggle="dropdown">name <b class="caret"></b></a>
+          <a href="#" class="username dropdown-toggle" data-toggle="dropdown"><?php session_start(); echo $_SESSION['username'];?> <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="../compte/compte.php">Compte</a></li>
             <hr style="margin-top: 5px; margin-bottom: 5px;">

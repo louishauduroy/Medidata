@@ -16,24 +16,21 @@ if (!isset($_SESSION['username'])){
   <title>Medidata</title>
 
   <link rel="stylesheet" href="../../jquery_bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="../login/login.css">
-  <link rel="stylesheet" href="../mainpage/accueil.css">
+  <link rel="stylesheet" href="../common/menu.css">
   <link rel="stylesheet" href="stats.css">
 
-  <script src="../../jquery_bootstrap/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../../jquery_bootstrap/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="../../jquery_bootstrap/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-
-
-  <script type="text/javascript" src="../mainpage/accueil.js"></script>
-   <script src="raphael.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+  <script type="text/javascript" src="raphael.js"></script>
+  <script type="text/javascript" src="../common/menu.js"></script>
   <script type="text/javascript" src="stats.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 
 </head>
 
 <header>
-  <?php include '../mainpage/menu.php';  ?>
+  <?php include '../common/menu.php';  ?>
 </header>
 
 <body >

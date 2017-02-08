@@ -1,0 +1,25 @@
+body > div {
+  padding-top: 50px;
+}
+
+body > div > h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #A4A3A3;
+  margin-top: 50px;
+}
+
+.mdp_message, .email_message, .username_message {
+  text-align: center;
+}
+
+.wrap-login {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.titre_login {
+  text-align: center;
+  margin-bottom: 30px;
+  color : #00C4E1;
+}

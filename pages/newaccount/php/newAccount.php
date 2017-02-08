@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST["email"]) && isset($_POST["mdp"]) && isset($_POST["username"])) {
-  include '../../phpBDD/connexionBDD.php';
+  include '../../../phpBDD/connexionBDD.php';
 
   // Hachage du mot de passe
   $password = sha1($_POST["mdp"]);
