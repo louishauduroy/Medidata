@@ -27,30 +27,7 @@ if (!isset($_SESSION['username'])){
 </head>
 
 <header>
-  <div class="navbar-fixed-top" style="background-color: #00C4E1;">
-    <div class="container">
-      <a href="../mainpage/accueil.php" style="color: #ffffff;" class="navbar-brand">MEDIDATA</a>
-      <button  style="background-color: white;" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" name="button">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse navHeaderCollapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a style="color: #ffffff;" href="../stats/stats.php">Statistiques</a></li>
-          <li><a style="color: #ffffff;" href="../gestion/gestion.php">Gestion Champs</a></li>
-          <li><a style="color: #ffffff;" href="../recherche/recherche.php">Recherche</a></li>
-          <li class="dropdown">
-            <a style="color: #ffffff;" href="#" class="username dropdown-toggle" data-toggle="dropdown">name <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a style="color: #00C4E1;" href="#">Compte</a></li>
-              <li><a class="logout" style="color: #00C4E1;" href="">Déconnexion</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <?php include '../mainpage/menu.php';  ?>
 </header>
 
 <body>

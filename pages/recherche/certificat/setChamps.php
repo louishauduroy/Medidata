@@ -59,29 +59,33 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 // on boucle
     while ($row = $reponse->fetch()) {
 
+		////////////////////////////////////////////////////////////////////////////
+		//////EN TETE: par medecin//////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////////
+
 		$pdf->SetTitle("certificat_deces_$id");
-		$pdf->SetFont('Arial','B',10);
+		$pdf->SetFont('Arial','',10);
 
 		$pdf->SetXY(16,14);
-        $pdf->Write(5,$row["departement"]);
+		$pdf->Write(5,$row["departement"]);
 
-		$pdf->SetXY(38,31);
+		$pdf->SetXY(20,31);
 		$pdf->Write(5,$row["commune_deces"]);
 
-		$x=65;
+		$x=66;
 		for($i=0;$i<5;$i++){
-			$x+=5;
-			$pdf->SetXY($x,36);
+			$x+=4.8;
+			$pdf->SetXY($x,35.8);
 			$pdf->Write(5,substr($row["code_postal_deces"], $i,1));
 		}
 
-        $pdf->SetXY(26,40);
+    $pdf->SetXY(30,41);
 		$pdf->Write(5,$row["nom"]);
 
-		$pdf->SetXY(31,45);
+		$pdf->SetXY(34,45.5);
 		$pdf->Write(5,$row["prenoms"]);
 
-		$pdf->SetXY(43,50);
+		$pdf->SetXY(45,50);
 		$pdf->Write(5,$row["date_naissance"]);
 
 		$pdf->SetXY(80,50);
@@ -90,15 +94,26 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 		$pdf->SetXY(33,55);
 		$pdf->Write(5,$row["domicile"]);
 
+		$pdf->SetXY(20,64.5);
+		$pdf->Write(5,$row["code_postal_domicile"]);
 
-		$pdf->SetXY(113,30);
+		$pdf->SetXY(40,64.5);
+		$pdf->Write(5,$row["commune_domicile"]);
+
+		$pdf->SetXY(113,31);
 		$pdf->Write(5,$row["date_deces"]);
 
-		$pdf->SetXY(142,30);
-		$pdf->Write(5,$row["commune_deces"]);
+		$pdf->SetXY(149,31);
+		$pdf->Write(5,substr($row["heure_deces"], 0,2));
 
-		$pdf->SetXY(164,30);
-		$pdf->Write(5,$row["heure_deces"]);
+		$pdf->SetXY(162,31);
+		$pdf->Write(5,substr($row["heure_deces"], 3,2));
+
+		//$pdf->SetXY(142,31);
+		//$pdf->Write(5,$row["commune_deces"]);
+
+		//$pdf->SetXY(164,31);
+		//$pdf->Write(5,$row["heure_deces"]);
 
 		$xYes=168;
 		$xNo=181;
@@ -136,36 +151,133 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 		$pdf->Write(5,$sign);
 
 
+		////////////////////////////////////////////////////////////////////////////
+		//////CODE POSTAL / LIEU / DATE/////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////////
+
+		$x=15.5;
+		for($i=0;$i<5;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,122);
+			$pdf->Write(5,substr($row["code_postal_deces"], $i,1));
+		}
+
+		$x=42;
+		for($i=0;$i<13;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,122);
+			$pdf->Write(5,substr($row["commune_deces"], $i,1));
+		}
+
+		$x=137;
+		for($i=0;$i<4;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,122);
+			$pdf->Write(5,substr($row["date_deces"], $i,1));
+		}
+		$x=124.5;
+		for($i=5;$i<7;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,122);
+			$pdf->Write(5,substr($row["date_deces"], $i,1));
+		}
+		$x=112;
+		for($i=8;$i<10;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,122);
+			$pdf->Write(5,substr($row["date_deces"], $i,1));
+		}
+
+		$x=15.5;
+		for($i=0;$i<5;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,133);
+			$pdf->Write(5,substr($row["code_postal_domicile"], $i,1));
+		}
+
+		$x=42;
+		for($i=0;$i<13;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,133);
+			$pdf->Write(5,substr($row["commune_domicile"], $i,1));
+		}
+
+		$x=137;
+		for($i=0;$i<4;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,133);
+			$pdf->Write(5,substr($row["date_naissance"], $i,1));
+		}
+		$x=124.5;
+		for($i=5;$i<7;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,133);
+			$pdf->Write(5,substr($row["date_naissance"], $i,1));
+		}
+		$x=112;
+		for($i=8;$i<10;$i++){
+			$x+=4.8;
+			$pdf->SetXY($x,133);
+			$pdf->Write(5,substr($row["date_naissance"], $i,1));
+		}
+
+		if($row["sexe"]=='M'){
+			$pdf->SetXY(171,120);
+			$pdf->Write(5,"X");
+		}
+		else if ($row["sexe"]=='F'){
+			$pdf->SetXY(171,133);
+			$pdf->Write(5,"X");
+		}
+
+
+		////////////////////////////////////////////////////////////////////////////
+		//////CAUSE DECES///////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////////
 
 		$pdf->SetXY(48,153);
 		$pdf->Write(5,$row["maladies_a"]);
 
-		$pdf->SetXY(171,153);
+		//$pdf->SetXY(161,153);
+		if($row["intervalle_a"]=='NULL') $pdf->SetXY(171,153);
+		else $pdf->SetXY(161,153);
 		$pdf->Write(5,$row["intervalle_a"]);
 
-		$pdf->SetXY(48,160);
+		$pdf->SetXY(48,161);
 		$pdf->Write(5,$row["maladies_b"]);
 
-		$pdf->SetXY(171,160);
+		//$pdf->SetXY(161,160);
+		if($row["intervalle_b"]=='NULL') $pdf->SetXY(171,161);
+		else $pdf->SetXY(161,161);
 		$pdf->Write(5,$row["intervalle_b"]);
 
-		$pdf->SetXY(48,167);
+		$pdf->SetXY(48,168);
 		$pdf->Write(5,$row["maladies_c"]);
 
-		$pdf->SetXY(171,167);
+		//$pdf->SetXY(161,167);
+		if($row["intervalle_c"]=='NULL') $pdf->SetXY(171,168);
+		else $pdf->SetXY(161,168);
 		$pdf->Write(5,$row["intervalle_c"]);
 
-		$pdf->SetXY(48,174);
+		$pdf->SetXY(48,176);
 		$pdf->Write(5,$row["maladies_d"]);
 
-		$pdf->SetXY(171,174);
+		//$pdf->SetXY(161,174);
+		if($row["intervalle_d"]=='NULL') $pdf->SetXY(171,176);
+		else $pdf->SetXY(161,176);
 		$pdf->Write(5,$row["intervalle_d"]);
 
-		$pdf->SetXY(50,193);
+		$pdf->SetXY(48,188);
 		$pdf->Write(5,$row["autres_contributions"]);
 
-		$pdf->SetXY(173,193);
+		//$pdf->SetXY(161,193);
+		if($row["intervalle_autres"]=='NULL') $pdf->SetXY(171,188);
+		else $pdf->SetXY(161,188);
 		$pdf->Write(5,$row["intervalle_autres"]);
+
+		////////////////////////////////////////////////////////////////////////////
+		//////INFO COMPLEMENTAIRES//////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////////
 
 		$y=204;
 		$xYes=166;
@@ -199,22 +311,22 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 		$pdf->SetXY(21,222);
 		$pdf->Write(5,$row["lieu_accident"]);
 
-		if($row["lieu_accident"]=="oui"){
+		if($row["accident_travail"]=="oui"){
 			$pdf->SetXY(137,222);
 			$pdf->Write(5,"X");
-		}else if($row["lieu_accident"]=="non"){
+		}else if($row["accident_travail"]=="non"){
 			$pdf->SetXY(154,222);
 			$pdf->Write(5,"X");
-		}else{
+		}else if($row["accident_travail"]=="sans precision"){
 			$pdf->SetXY(171,222);
 			$pdf->Write(5,"X");
 		}
 
 		if($row["autopsie"]=="oui, resultat disponible"){
-			$pdf->SetXY(42,233);
+			$pdf->SetXY(41,234);
 			$pdf->Write(5,"X");
 		}else if($row["autopsie"]=="non"){
-			$pdf->SetXY(24,233);
+			$pdf->SetXY(24,234);
 			$pdf->Write(5,"X");
 		}else{
 			$pdf->SetXY(24,240);
@@ -223,22 +335,22 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 
 		switch($row["lieu_deces"]){
 			case "domicile":
-			$pdf->SetXY(95,233);
+			$pdf->SetXY(97,234);
 			$pdf->Write(5,"X");
 			break;
 
 			case "hopital":
-			$pdf->SetXY(141,233);
+			$pdf->SetXY(141,234);
 			$pdf->Write(5,"X");
 			break;
 
 			case "clinique privee":
-			$pdf->SetXY(172,233);
+			$pdf->SetXY(170,234);
 			$pdf->Write(5,"X");
 			break;
 
-			case "hospice, maison de retraite":
-			$pdf->SetXY(95,240);
+			case "hospice":
+			$pdf->SetXY(97,240);
 			$pdf->Write(5,"X");
 			break;
 
@@ -248,7 +360,7 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 			break;
 
 			case "autre lieu":
-			$pdf->SetXY(172,240);
+			$pdf->SetXY(170,240);
 			$pdf->Write(5,"X");
 			break;
 

@@ -31,11 +31,9 @@ $(document).ready(function() {
 
     $.post("../../phpBDD/changemail.php", { Nemail: Nemail, Aemail: Aemail, mdp :mdp })
       .done(function(data) {
-        if(data=='Changement email réussi !'){
-          $('.email_message').css('color','#0BDA51');
-        }
+        if(data=='Changement email réussi !'){ $('.email_message').css('color','#0BDA51'); }
         else { $('.email_message').css('color','red'); }
-          $('.email_message').text(data);
+        $('.email_message').text(data);
       });
     $('#Nemail').val("");
     $('#Aemail').val("");
@@ -59,7 +57,7 @@ $(document).ready(function() {
             })
         }
         else { $('.username_message').css('color','red'); }
-          $('.username_message').text(data);
+        $('.username_message').text(data);
       });
     $('#email2').val("");
     $('#username2').val("");

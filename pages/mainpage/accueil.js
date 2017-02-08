@@ -14,7 +14,7 @@ $(document).ready(function() {
   $.post("../../phpBDD/admin.php", false)
     .done(function(data) {
       if(data == 'admin'){
-        $('.dropdown-menu').prepend('<li><a class="naccount" style="color: #00C4E1;" href="../newaccount/createAccount.php">Nouveau compte</a></li>')
+        $('.dropdown-menu').prepend('<li><a class="naccount" href="../newaccount/createAccount.php">Nouveau compte</a></li>')
       }
       else {
         console.log('hoho');

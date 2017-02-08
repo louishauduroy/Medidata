@@ -14,15 +14,19 @@ $(document).ready(function() {
     username = $('#username').val();
 
     if ( ($.trim( email ) == '')  || ($.trim( mdp ) == '') || ($.trim( mdp2 ) == '') || ($.trim( username ) == '')){
+      $('.login_message').css('color','red');
       $('.login_message').text('Veuillez entrer les informations');
     }
     else {
       if (mdp == mdp2){
         $.post("newAccount.php", { email: email, mdp: mdp, username: username })
           .done(function(data) {
+            if(data=='Creation reussie') { $('.login_message').css('color','#0BDA51'); }
+            else { $('.login_message').css('color','red'); }
             $('.login_message').text(data);
           });
       }else {
+        $('.login_message').css('color','red');
         $('.login_message').text('Confirmez les même mot de passe');
       }
     }

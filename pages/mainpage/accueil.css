@@ -1,22 +1,67 @@
-.navbar {
-  background-color: #00C4E1;
-  border-color: #00C4E1;
-}
-
-a {
-  color: #ffffff;
-}
-
 label {
   font-size: 15px;
 }
 
-.topmenu {
-  color: #00C4E1;
+/* DESIGN barre du menu */
+.navbar-default > .container > .navHeaderCollapse > .navbar-nav > .dropdown > .dropdown-menu {
+  background-color: #00C4E1;
+  border-color: #00C4E1;
 }
 
-.topmenu:hover {
+.navbar-default > .container > .navHeaderCollapse > .navbar-nav > .dropdown > .dropdown-menu > li > a {
   color: white;
 }
 
-#sidebar { width: 40%; position: fixed; left: 40%; }
+.navbar-default > .container > .navHeaderCollapse > .navbar-nav > .dropdown > .dropdown-menu > li > a:hover {
+  color: #00C4E1;
+  background-color: white;
+}
+
+.navbar-default > .container > .navHeaderCollapse > .navbar-nav > .dropdown > .dropdown-toggle {
+  color: white;
+}
+
+.navbar-default > .container > .navHeaderCollapse > .navbar-nav > .dropdown > .dropdown-toggle:focus {
+  color: #00C4E1;
+  background-color: white;
+}
+
+.navbar-default > .container > .navHeaderCollapse > .navbar-nav > .dropdown > .dropdown-toggle:hover {
+  color: #00C4E1;
+  background-color: white;
+}
+
+.navbar-default > .container > .navHeaderCollapse > .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default > .container > .navHeaderCollapse > .navbar-nav > li > a:hover {
+  color: #00C4E1;
+  background-color: white;
+}
+
+.navbar-default {
+  background-color: #00C4E1;
+}
+
+.navbar-default > .container > .navbar-brand {
+  color: white;
+}
+
+.navbar-default > .container > .navbar-toggle {
+  border-color:white;
+}
+
+.navbar-default > .container > .navbar-toggle:hover {
+  background-color:white;
+}
+
+.navbar-default > .container > .navbar-toggle:hover span {
+  background-color: #00C4E1;
+}
+
+.navbar-default > .container > .navbar-toggle > span {
+  background-color:white;
+}
+
+/* END DESIGN barre du menu */
