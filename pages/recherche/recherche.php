@@ -45,10 +45,15 @@ include '../../phpBDD/userExist.php';
       </div>
 
       <div class="en_tete text-center">
-        <h1>Recherche dans la base de données</h1>
-        <a href="#menu-toggle" class="btn btn-default btn-lg" id="menu-toggle">Critères de recherche</a>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <h1 id="titre2">Recherche dans la base de données</h1>
+          <a href="#menu-toggle" class="btn btn-default btn-lg" id="menu-toggle">Critères de recherche</a>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <h1 id="titre">Nombre de résultats:</h1>
+          <h1 id="resultat_requete"></h1>
+        </div>
       </div>
-
       <div id="page-content-wrapper">
         <div class="col-lg-12" id="div-tab">
           <div id="zone_resultats"></div>

@@ -12,7 +12,7 @@ $(document).ready(function() {
         $('.dropdown-menu').prepend('<li><a class="naccount" href="../newaccount/createAccount.php">Gestion Admin</a></li>')
       }
       else {
-        console.log('hoho');
+        
       }
     });
 

@@ -1,12 +1,10 @@
 $(document).ready(function() {
-  var email = "";
-  var mdp = "";
 
-  $('#email').val("");
+  clear_input();
 
   $('.btn-login').click(function() {
-    email = $('#email').val();
-    mdp = $('#password').val();
+    var email = $('#email').val();
+    var mdp = $('#password').val();
 
     $.post("php/connexion.php", { email: email, mdp: mdp })
       .done(function(data) {
@@ -20,9 +18,13 @@ $(document).ready(function() {
         $('.login_message').text(data);
       });
 
+    clear_input();
+  });
+
+  function clear_input(){
     $('#email').val('');
     $('#password').val('');
-  });
+  }
 
 
 

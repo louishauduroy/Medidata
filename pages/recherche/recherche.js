@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $( "#zone_resultats" ).load("php/phpinfosbdd.php?");
+  $( "#resultat_requete" ).load("php/nb_resultats.php?");
 
   $("#menu-toggle").click(function(e) {
       e.preventDefault();
@@ -16,6 +17,7 @@ $(document).ready(function() {
     var values = {};
     var valuesname = {};
     var lien = "php/phpinfosbdd.php";
+    var lien2 = "php/nb_resultats.php";
     var premier = true;
 
     $('.data').each(function() {
@@ -25,19 +27,21 @@ $(document).ready(function() {
           if (premier == true)
           {
             lien = lien + "?" + this.id + "=" + value;
+            lien2 = lien2 + "?" + this.id + "=" + value;
             premier = false;
           }
           else {
             lien = lien + "&&" + this.id + "=" + value + "";
+            lien2 = lien2 + "&&" + this.id + "=" + value + "";
           }
       }
     });
     console.log(lien);
-
+    console.log(lien2);
 
     $( "#zone_resultats" ).load(lien);
+    $( "#resultat_requete" ).load(lien2);
     $("#wrapper").toggleClass("toggled");
-
   });
 
 

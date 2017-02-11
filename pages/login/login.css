@@ -13,3 +13,9 @@
   margin-top: 40px;
   margin-left: 20px;
 }
+
+@media(max-width:400px){
+  .titre_login {
+    font-size: 25px;
+  }
+}
