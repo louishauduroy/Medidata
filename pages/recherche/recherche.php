@@ -5,6 +5,7 @@ if (!isset($_SESSION['username'])){
     <script> window.location.replace('../login/login.php') </script>
   <?php
 }
+include '../../phpBDD/userExist.php';
 ?>
 
 <html lang="en">
@@ -43,7 +44,7 @@ if (!isset($_SESSION['username'])){
         <ul class="sidebar-nav"></ul>
       </div>
 
-      <div class="jumbotron text-center bg-blue">
+      <div class="en_tete text-center">
         <h1>Recherche dans la base de données</h1>
         <a href="#menu-toggle" class="btn btn-default btn-lg" id="menu-toggle">Critères de recherche</a>
       </div>
@@ -52,6 +53,10 @@ if (!isset($_SESSION['username'])){
         <div class="col-lg-12" id="div-tab">
           <div id="zone_resultats"></div>
         </div>
+      </div>
+
+      <div class="">
+        <button type="button" name="button"></button>
       </div>
 
     </div>

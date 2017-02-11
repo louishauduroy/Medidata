@@ -5,6 +5,7 @@ if (!isset($_SESSION['username'])){
     <script> window.location.replace('../login/login.php') </script>
   <?php
 }
+include '../../phpBDD/userExist.php';
 ?>
 
 <html>

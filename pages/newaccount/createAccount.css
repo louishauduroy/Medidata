@@ -1,6 +1,6 @@
 .wrap-login {
   margin-bottom: 40px;
-  margin-top:  7%;
+  margin-top:  70px;
 }
 
 .titre_login {
@@ -13,6 +13,39 @@
   color : #00C4E1;
 }
 
-.login_message {
+.login_message, .del_message {
   text-align: center;
+}
+
+main > div > .nav {
+  margin-top:80px;
+}
+
+main > div > .nav > li > a {
+  color: #00C4E1;
+}
+
+main > div > .nav > li > a:hover {
+  border-color: #00C4E1;
+}
+
+main > div > .nav > .active > a {
+  background-color: #00C4E1;
+  color: white;
+}
+
+.table {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+@media(max-width:767px){
+  .table {
+    font-size: 13px;
+  }
+}
+
+.head {
+  color: white;
+  background-color: #00C4E1;
 }

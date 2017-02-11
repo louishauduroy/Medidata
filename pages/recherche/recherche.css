@@ -33,9 +33,7 @@
 }
 
 #page-content-wrapper {
-  margin-top: 200px;
   width: 100%;
-  position: absolute;
   padding: 15px;
 }
 
@@ -47,6 +45,14 @@
 #div-tab {
   overflow-x: : scroll;
   white-space: nowrap;
+  margin-top: 140px;
+}
+
+@media(max-width:570px){
+  #div-tab {
+    margin-top: 180px;
+  }
+
 }
 
 #zone_resultats {
@@ -54,9 +60,11 @@
   margin-right: 3%;
 }
 
-.jumbotron {
+.en_tete {
+  padding-top: 20px;
   width: 100%;
   position: fixed;
+  background-color: #eeeeee;
 }
 
 
@@ -98,7 +106,8 @@
 #sidebar { width: 40%; position: fixed; left: 40%; }
 
 #menu-toggle {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 #certif {
@@ -106,5 +115,5 @@
 }
 
 #certif:link {
-  text-decoration:none; 
+  text-decoration:none;
 }

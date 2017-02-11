@@ -17,6 +17,7 @@ if (isset($_SESSION['username'] )){
 
   <link rel="stylesheet" href="../../jquery_bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="../common/menu.css">
 
   <script src="../../jquery_bootstrap/jquery-3.1.1.min.js"></script>
   <script src="login.js"></script>

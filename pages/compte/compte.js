@@ -8,7 +8,7 @@ $(document).ready(function() {
     $('.email_message').text("");
     $('.username_message').text("");
 
-    $.post("../../phpBDD/changemdp.php", { email: email, Amdp: Amdp, Nmdp :Nmdp, Nmdp2 :Nmdp2 })
+    $.post("php/changemdp.php", { email: email, Amdp: Amdp, Nmdp :Nmdp, Nmdp2 :Nmdp2 })
       .done(function(data) {
         if(data=='Changement mot de passe réussi !'){
           $('.mdp_message').css('color','#0BDA51');
@@ -16,10 +16,7 @@ $(document).ready(function() {
         else { $('.mdp_message').css('color','red'); }
           $('.mdp_message').text(data);
       });
-    $('#email').val("");
-    $('#Amdp').val("");
-    $('#Nmdp').val("");
-    $('#Nmdp2').val("");
+    clear_input();
   });
 
   $('.btn-email').click(function() {
@@ -29,15 +26,13 @@ $(document).ready(function() {
     $('.mdp_message').text("");
     $('.username_message').text("");
 
-    $.post("../../phpBDD/changemail.php", { Nemail: Nemail, Aemail: Aemail, mdp :mdp })
+    $.post("php/changemail.php", { Nemail: Nemail, Aemail: Aemail, mdp :mdp })
       .done(function(data) {
         if(data=='Changement email réussi !'){ $('.email_message').css('color','#0BDA51'); }
         else { $('.email_message').css('color','red'); }
         $('.email_message').text(data);
       });
-    $('#Nemail').val("");
-    $('#Aemail').val("");
-    $('#mdp').val("");
+    clear_input();
   });
 
   $('.btn-username').click(function() {
@@ -47,7 +42,7 @@ $(document).ready(function() {
     $('.email_message').text("");
     $('.mdp_message').text("");
 
-    $.post("../../phpBDD/changename.php", { email: email, name: name, mdp :mdp })
+    $.post("php/changename.php", { email: email, name: name, mdp :mdp })
       .done(function(data) {
         if(data=='Changement username réussi !'){
           $('.username_message').css('color','#0BDA51');
@@ -59,9 +54,22 @@ $(document).ready(function() {
         else { $('.username_message').css('color','red'); }
         $('.username_message').text(data);
       });
+    clear_input();
+  });
+
+  function clear_input(){
     $('#email2').val("");
     $('#username2').val("");
     $('#mdp2').val("");
-  });
+
+    $('#Nemail').val("");
+    $('#Aemail').val("");
+    $('#mdp').val("");
+
+    $('#email').val("");
+    $('#Amdp').val("");
+    $('#Nmdp').val("");
+    $('#Nmdp2').val("");
+  }
 
 });

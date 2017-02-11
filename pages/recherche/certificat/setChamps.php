@@ -240,6 +240,8 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 
 		//$pdf->SetXY(161,153);
 		if($row["intervalle_a"]=='NULL') $pdf->SetXY(171,153);
+		else if (strlen($row["intervalle_a"]) <= 7) $pdf->SetXY(170,153);
+		else if (strlen($row["intervalle_a"]) <= 13) $pdf->SetXY(165,153);
 		else $pdf->SetXY(161,153);
 		$pdf->Write(5,$row["intervalle_a"]);
 
@@ -248,6 +250,8 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 
 		//$pdf->SetXY(161,160);
 		if($row["intervalle_b"]=='NULL') $pdf->SetXY(171,161);
+		else if (strlen($row["intervalle_b"]) <= 7) $pdf->SetXY(170,161);
+		else if (strlen($row["intervalle_b"]) <= 13) $pdf->SetXY(165,161);
 		else $pdf->SetXY(161,161);
 		$pdf->Write(5,$row["intervalle_b"]);
 
@@ -256,6 +260,8 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 
 		//$pdf->SetXY(161,167);
 		if($row["intervalle_c"]=='NULL') $pdf->SetXY(171,168);
+		else if (strlen($row["intervalle_c"]) <= 7) $pdf->SetXY(170,168);
+		else if (strlen($row["intervalle_c"]) <= 13) $pdf->SetXY(165,168);
 		else $pdf->SetXY(161,168);
 		$pdf->Write(5,$row["intervalle_c"]);
 
@@ -264,6 +270,8 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 
 		//$pdf->SetXY(161,174);
 		if($row["intervalle_d"]=='NULL') $pdf->SetXY(171,176);
+		else if (strlen($row["intervalle_d"]) <= 7) $pdf->SetXY(170,176);
+		else if (strlen($row["intervalle_d"]) <= 13) $pdf->SetXY(165,176);
 		else $pdf->SetXY(161,176);
 		$pdf->Write(5,$row["intervalle_d"]);
 
@@ -272,6 +280,8 @@ $reponse = $bdd->query("SELECT * FROM certificat WHERE id_patient=$id");
 
 		//$pdf->SetXY(161,193);
 		if($row["intervalle_autres"]=='NULL') $pdf->SetXY(171,188);
+		else if (strlen($row["intervalle_autres"]) <= 7) $pdf->SetXY(170,188);
+		else if (strlen($row["intervalle_autres"]) <= 13) $pdf->SetXY(165,188);
 		else $pdf->SetXY(161,188);
 		$pdf->Write(5,$row["intervalle_autres"]);
 

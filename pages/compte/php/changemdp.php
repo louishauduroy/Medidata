@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST["email"]) && isset($_POST["Amdp"]) && isset($_POST["Nmdp"]) && isset($_POST["Nmdp2"])) {
-  include 'connexionBDD.php';
+  include '../../../phpBDD/connexionBDD.php';
   session_start();
 
   $email = $_POST["email"];

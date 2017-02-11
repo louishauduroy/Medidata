@@ -5,6 +5,7 @@ if (!isset($_SESSION['username'])){
     <script> window.location.replace('../login/login.php') </script>
   <?php
 }
+include '../../phpBDD/userExist.php';
 ?>
 
 <html lang="en">
@@ -82,6 +83,7 @@ if (!isset($_SESSION['username'])){
 
     </div>
     <canvas id="myChart"></canvas>
+
   </main>
 
 </body>

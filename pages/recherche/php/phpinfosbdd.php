@@ -23,22 +23,19 @@
 			}
 
 			//construction de l'en-tête du tableau avec le nom des champs
+			$stringHtml.= "<th style='text-align: center; background-color: #00C4E1; color: #ffffff; font-size: 15px;'>Certificat</th>";
 			for($i=0;$i<sizeof($tabChamps);$i++){
-				$stringHtml.= "<th style='text-align: center; background-color: #00C4E1; color: #ffffff;'>$tabChamps[$i]</th>";
+				$stringHtml.= "<th style='text-align: center; background-color: #00C4E1; color: #ffffff; font-size: 15px;'>$tabChamps[$i]</th>";
 			}
-			$stringHtml.= "<th style='text-align: center; background-color: #00C4E1; color: #ffffff;'>Certificat</th>";
 			$stringHtml.= "</tr>";
 
 			//pour chaque case (champ) cochée, on met à jour la requète et l'en-tête du tableau
 
-
-
-			 $where=""; //si on a intégré des critères de recherche (ici des dates)
+			$where=""; //si on a intégré des critères de recherche (ici des dates)
 
 			for($i=0;$i<sizeof($tabChamps);$i++){
 				if (isset($_GET[$tabChamps[$i]]))
 				{
-
 					if (strlen($where)>0){
 						$where.=" AND ";
 					}  else $where.=" WHERE ";
@@ -46,10 +43,6 @@
 					$where.="$tabChamps[$i]='$critere'";
 				}
 			}
-
-
-
-
 
 			$stringQuery.=$where;
 
@@ -61,23 +54,22 @@
 			{
 				$stringHtml.= "<tr>";
 
-				for($i=0;$i<sizeof($tabChamps);$i++){
-
-					$temp=$donnees[$tabChamps[$i]];
-					$stringHtml.= "<td>$temp</td>";
-				}
 				$id=$donnees['id_patient'];
 				$stringHtml.= "<td>
 													<button style='margin: 0; padding: 0;' type='button' class='btn btn-success btn-lg btn-block'>
-														<a href='certificat/setChamps.php?id_patient=$id' target='_blank' id='certif'>Certif</a>
+														<a href='certificat/setChamps.php?id_patient=$id' target='_blank' id='certif' style='font-size: 15px;'>Certif</a>
 													</button>
 											</td>";
+
+				for($i=0;$i<sizeof($tabChamps);$i++){
+					$temp=$donnees[$tabChamps[$i]];
+					$stringHtml.= "<td style='font-size: 15px;'>$temp</td>";
+				}
 				$stringHtml.= "</tr>";
 
 			}
 
 			$stringHtml.= "</table></div>";
-
 
 			echo $stringHtml;
 

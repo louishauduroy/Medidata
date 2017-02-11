@@ -4,8 +4,8 @@ session_start();
 
 if (isset($_SESSION['username'])){
   include 'connexionBDD.php';
-  $name = $_SESSION['username'];
-  $requete = "SELECT type FROM utilisateurs WHERE name = '$name'";
+  $email = $_SESSION['email'];
+  $requete = "SELECT type FROM utilisateurs WHERE email = '$email'";
 
   $req = $bdd->prepare($requete);
   $req->execute();

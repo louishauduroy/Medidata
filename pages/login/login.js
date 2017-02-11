@@ -8,7 +8,7 @@ $(document).ready(function() {
     email = $('#email').val();
     mdp = $('#password').val();
 
-    $.post("../../phpBDD/connexion.php", { email: email, mdp: mdp })
+    $.post("php/connexion.php", { email: email, mdp: mdp })
       .done(function(data) {
         if(data == 'Vous êtes connecté !'){
           $('.login_message').css('color','#0BDA51');
@@ -20,13 +20,8 @@ $(document).ready(function() {
         $('.login_message').text(data);
       });
 
-    $.post("../../phpBDD/userlogged.php", false)
-      .done(function(data) {
-        if(data == ''){
-        } else {
-          window.location = '../mainpage/accueil.php';
-        }
-      });
+    $('#email').val('');
+    $('#password').val('');
   });
 
 

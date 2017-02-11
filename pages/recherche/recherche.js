@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     $('.data').each(function() {
       if (this.value != ""){
-          var value = encodeURIComponent(this.value.trim())
+          var value = (this.value).replace(/ /g,"%20");
           values[this.id] = value;
           if (premier == true)
           {
