@@ -33,6 +33,7 @@ include '../../phpBDD/userExist.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Medidata</title>
+  <link rel="icon" href="../../img/logo2.png">
 
   <link rel="stylesheet" href="../../jquery_bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../common/menu.css">

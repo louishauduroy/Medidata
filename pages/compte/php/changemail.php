@@ -29,6 +29,7 @@ if(isset($_POST["Nemail"]) && isset($_POST["Aemail"]) && isset($_POST["mdp"])) {
       $req3->execute(array(
         "email1" => $Nemail,
         "email2" => $Aemail));
+      $_SESSION['email']= $Nemail;
       $req3->closeCursor();
       echo 'Changement email réussi !';
     }
